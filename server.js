@@ -13,5 +13,5 @@ app.get('/', (req, res)=>
 });
 
 app.listen(process.env.PORT || 80, () => {
-    console.log("Listening on http://localhost:8080");
+    console.log("Listening on http://visualizr-ar.herokuapp.com:80");
 });
