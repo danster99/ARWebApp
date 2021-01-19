@@ -12,6 +12,6 @@ app.get('/', (req, res)=>
     res.render('index');
 });
 
-// app.listen(8080, () => {
-//     console.log("Listening on http://localhost:8080");
-// });
+app.listen(process.env.PORT || 80, () => {
+    console.log("Listening on http://localhost:8080");
+});
