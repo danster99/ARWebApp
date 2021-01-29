@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: false}));
 app.get('/', (req, res)=>
 {
     res.render('index');
+    console.log("rendered");
     const { Client } = require('pg');
 
     const client = new Client({
