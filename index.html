@@ -2,19 +2,18 @@
 <html>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-    <body style="margin: 0px; overflow: hidden">
-        <a-scene embeded arjs>
-            <a-marker preset="hiro">
-                <a-box position="0 0.5 0" material="color: red;">
-                    <a-animation attribute="rotation"
-                        dur="3000"
-                        to="360 360 0"
-                        repeat="indefinite"
-                        easing="linear">
-                    </a-animation>
-                </a-box>
+    <body style=’margin : 0px; overflow: hidden;’>
+        <a-scene embedded arjs=’sourceType: webcam;’>
+            <a-marker preset=’hiro’>
+              <!-- Adding an OBJ file to an AR Project-->
+              <a-entity 
+                  obj-model="obj: url(); 
+                  mtl: url(/path/to/nameOfFile.mtl)"">
+              </a-entity>
+                    
             </a-marker>
-            <a-entity camera></a-entity>>
+        <a-entity camera>
+        </a-entity>
         </a-scene>
-    </body>
+      </body>
 </html>
