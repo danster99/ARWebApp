@@ -1,2 +1,2 @@
 web: node api.js
-web: npm install express
+ npm install express
