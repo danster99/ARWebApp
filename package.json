@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-},
+  },
   "keywords": [
     "strongloop",
     "StrongLoop",
@@ -25,5 +25,6 @@
     "node": ">=4"
   },
   "devDependencies": {
+    "express": "^4.17.1"
   }
 }
