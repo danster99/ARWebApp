@@ -1,2 +1,1 @@
-web: node api.js
- npm install express
+web $(node api.js npm; install express)
