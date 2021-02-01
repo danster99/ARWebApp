@@ -1,0 +1,43 @@
+newmtl Paste__WLRRS_tex0
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd Paste__WLRRS_tex0.png
+
+
+newmtl Paste__WLRRS_tex1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd Paste__WLRRS_tex1.png
+
+
+newmtl Paste__WLRRS_tex2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd Paste__WLRRS_tex2.png
+
+
+newmtl Paste__WLRRS_tex3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd Paste__WLRRS_tex3.png
+
+
+
+
+#EOF
