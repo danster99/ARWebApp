@@ -4,7 +4,7 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <body style=’margin : 0px; overflow: hidden;’>
         <a-scene embedded arjs=’sourceType: webcam;’>
-            <a-marker preset=’hiro’>
+            
               <!-- Adding an OBJ file to an AR Project-->
               <a-assets>
                 <a-asset-item id="plate-obj" src="../Models/OBJ/3dob.obj"></a-asset-item>
@@ -12,7 +12,7 @@
               </a-assets>
             
               <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
-                    
+            <a-marker preset=’hiro’>     
             </a-marker>
         <a-entity camera>
         </a-entity>
