@@ -6,9 +6,12 @@
         <a-scene embedded arjs=’sourceType: webcam;’>
             <a-marker preset=’hiro’>
               <!-- Adding an OBJ file to an AR Project-->
-              <a-entity 
-                  obj-model='obj: url(./Models/OBJ/3dob.obj); mtl: url(./Models/MTL/3dob.mtl)'>
-              </a-entity>
+              <a-assets>
+                <a-asset-item id="plate-obj" src="/Models/OBJ/3dob.obj"></a-asset-item>
+                <a-asset-item id="plate-mtl" src="/Models/MTL/3dob.mtl"></a-asset-item>
+              </a-assets>
+            
+              <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
                     
             </a-marker>
         <a-entity camera>
