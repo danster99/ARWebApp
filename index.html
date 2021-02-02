@@ -31,11 +31,7 @@
               document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl");
             }
             reload();
-            var scale = document.getElementById("marker").getAttribute("scale");
-            scale.x = 0.3;
-            scale.y=0.3;
-            scale.z=0.3;
-            document.getElementById("marker").setAttribute("scale", scale);
+            document.getElementById("marker").setAttribute("scale", "0.3 0.3 0.3");
           }
         }
 
@@ -61,7 +57,6 @@
         
           
           <a-marker preset="hiro" id="marker">
-            <a-entity id="entity" position="0 0 0" rotation="0 0 0"></a-entity>            
           </a-marker>
           <a-entity camera></a-entity>
         </a-scene>
