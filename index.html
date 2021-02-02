@@ -20,22 +20,22 @@
           changeObj : function(i){
             if(i == 1)
             {
-              document.getElementById("entity").setAttribute("obj-model","obj: #ciuperci_obj; mtl: #ciuperci_mtl");
+              document.getElementById("marker").setAttribute("obj-model","obj: #ciuperci_obj; mtl: #ciuperci_mtl");
             }
             if(i == 2)
             {
-              document.getElementById("entity").setAttribute("obj-model","obj: #burger_obj; mtl: #burger_mtl");
+              document.getElementById("marker").setAttribute("obj-model","obj: #burger_obj; mtl: #burger_mtl");
             }
             if(i == 3)
             {
-              document.getElementById("entity").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl");
+              document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl");
             }
             reload();
-            var scale = document.getElementById("entity").getAttribute("scale");
+            var scale = document.getElementById("marker").getAttribute("scale");
             scale.x = 0.3;
             scale.y=0.3;
             scale.z=0.3;
-            document.getElementById("entity").setAttribute("scale", scale);
+            document.getElementById("marker").setAttribute("scale", scale);
           }
         }
 
