@@ -4,15 +4,15 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <body style=’margin:0px; overflow:hidden;’>
         <a-scene embedded arjs=’sourceType: webcam;’>
-            <!--<a-assets>
-              <a-asset-item id="plate-obj" src="public/models/obj/Paste_LRRS.obj"></a-asset-item>
-              <a-asset-item id="plate-mtl" src="public/models/mtl/Paste_LRRS.mtl"></a-asset-item>
-            </a-assets>-->
+            <a-assets>
+              <a-asset-item id="plate-obj" src="public/models/obj/ciuperci.obj"></a-asset-item>
+              <a-asset-item id="plate-mtl" src="public/models/mtl/ciuperci.mtl"></a-asset-item>
+            </a-assets>
           
             
             <a-marker preset="hiro">
-              <!--<a-entity obj-model="obj: #plate-obj; mtl: #plate-mtl" position="-5 0 0" rotation="90 90 0"></a-entity>-->
-              <a-entity gltf-model="public/models/gltf/ciuperci.gltf" position="0 0 0"></a-entity>
+              <a-entity obj-model="obj: #plate-obj; mtl: #plate-mtl" position="-5 0 0" rotation="90 90 0"></a-entity>
+              <!-- <a-entity gltf-model="public/models/gltf/ciuperci.gltf" position="0 0 0"></a-entity> -->
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
