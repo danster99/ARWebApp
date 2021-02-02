@@ -3,25 +3,23 @@
   <link rel="stylesheet" href="styles.css">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-    <body style=’margin:20px; overflow:hidden;’ id="body">
+    <body style=’margin:20px; overflow:hidden;’>
       <div style="height: 50%;">
       <script>
         var page = {
+          source: "ciuperci",
           changeObj : function(i){
             if(i == 1)
             {
-              document.getElementById("plate-obj").src="public/models/obj/ciuperci.obj"
-              document.getElementById("plate-mtl").src="public/models/mtl/ciuperci.mtl"
+              source = "ciuperci"
             }
             if(i == 2)
             {
-              document.getElementById("plate-obj").src="public/models/obj/burger.obj"
-              document.getElementById("plate-mtl").src="public/models/mtl/burger.mtl"
+              source = "burger"
             }
             if(i == 3)
             {
-              document.getElementById("plate-obj").src="public/models/obj/paste.obj"
-              document.getElementById("plate-mtl").src="public/models/mtl/paste.mtl"
+              source = "paste"
             }
             reload();
             console.log("value: " + document.getElementById("plate-mtl").src);
@@ -29,10 +27,10 @@
         }
 
       </script>
-        <a-scene embedded arjs=’sourceType: webcam;’>
+        <a-scene embedded arjs=’sourceType: webcam;’ id="scene">
           <a-assets>
-            <a-asset-item id="plate-obj"></a-asset-item>
-            <a-asset-item id="plate-mtl"></a-asset-item>
+            <a-asset-item id="plate-obj" src="public/models/obj/"+page.source+".obj"></a-asset-item>
+            <a-asset-item id="plate-mtl"src="public/models/mtl/"+page.source+".mtl"></a-asset-item>
             <script>page.changeObj(1);</script>
           </a-assets>
         
@@ -57,7 +55,7 @@
 
     <script>
       function reload(){
-        var container = document.getElementById("body");
+        var container = document.getElementById("scene");
         var content = container.innerHTML;
         container.innerHTML= content; 
 
