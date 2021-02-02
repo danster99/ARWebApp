@@ -2,6 +2,6 @@
     visibility: hidden;
 }
 
-video {
+video[style] {
     height: 300px;
 }
