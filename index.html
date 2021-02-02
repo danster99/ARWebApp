@@ -39,7 +39,7 @@
       </script>
         <a-scene embedded arjs=’sourceType: webcam;’ id="scene">
           <a-assets>
-            <a-asset-item id="plate-obj" src="'public/models/obj/'+page.source+''.obj'")></a-asset-item>
+            <a-asset-item id="plate-obj" src="page.source"></a-asset-item>
             <a-asset-item id="plate-mtl"src=@Url.Content("public/models/mtl/",page.source,".mtl")></a-asset-item>
             <script>page.changeObj(1);</script>
           </a-assets>
