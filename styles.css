@@ -6,6 +6,7 @@
 }
 
 video[style] {
-    height: 60% !important;
-    padding-top: 10% !important;
+
+    max-width: 100% !important;
+    height: auto !important;
 }
