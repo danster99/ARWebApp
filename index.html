@@ -37,6 +37,13 @@
         }
 
       </script>
+      <select name="objects" id="objects" style="padding-top: 20px;">
+        <option value="1">Ciuperci</option>
+        <option value="2">Burger</option>
+        <option value="3">Paste</option>
+      </select>
+      <button onclick="page.changeObj(document.getElementById('objects').value)"> Display</button>
+  
         <a-scene embedded arjs=’sourceType: webcam;’ id="scene">
           <a-assets>
             <a-asset-item id="ciuperci_obj" src="public/models/obj/ciuperci.obj"></a-asset-item>
@@ -51,7 +58,9 @@
         
           
           <a-marker preset="hiro" id="marker">
-            <a-entity id="entity" position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity scale="0.3 0.3 0.3">
+             <a-entity id="entity" position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            </a-entity>
             
           </a-marker>
           <a-entity camera></a-entity>
@@ -60,13 +69,7 @@
 
 
 
-    <select name="objects" id="objects" style="padding-top: 20px;">
-      <option value="1">Ciuperci</option>
-      <option value="2">Burger</option>
-      <option value="3">Paste</option>
-    </select>
-    <button onclick="page.changeObj(document.getElementById('objects').value)"> Display</button>
-
+    
     
 
 
