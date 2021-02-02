@@ -4,21 +4,18 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <body style=’margin:0px; overflow:hidden;’>
-      
-      <div style="height:50%">
-          <a-scene embedded arjs=’sourceType: webcam;’>
-            <a-assets>
-              <a-asset-item id="plate-obj" src="public/models/obj/ciuperci.obj"></a-asset-item>
-              <a-asset-item id="plate-mtl" src="public/models/mtl/ciuperci.mtl"></a-asset-item>
-            </a-assets>
+        <a-scene embedded arjs=’sourceType: webcam;’>
+          <a-assets>
+            <a-asset-item id="plate-obj" src="public/models/obj/ciuperci.obj"></a-asset-item>
+            <a-asset-item id="plate-mtl" src="public/models/mtl/ciuperci.mtl"></a-asset-item>
+          </a-assets>
+        
           
-            
-            <a-marker preset="hiro">
-              <a-entity obj-model="obj: #plate-obj; mtl: #plate-mtl" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"><script>console.log("marker detected");</script></a-entity>
-              <!-- <a-entity gltf-model="public/models/gltf/ciuperci.gltf" position="0 0 0" rotation="90 0 0" scale="0.3 0.3 0.3"></a-entity> -->
-            </a-marker>
-            <a-entity camera></a-entity>
+          <a-marker preset="hiro">
+            <a-entity obj-model="obj: #plate-obj; mtl: #plate-mtl" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"><script>console.log("marker detected");</script></a-entity>
+            <!-- <a-entity gltf-model="public/models/gltf/ciuperci.gltf" position="0 0 0" rotation="90 0 0" scale="0.3 0.3 0.3"></a-entity> -->
+          </a-marker>
+          <a-entity camera></a-entity>
         </a-scene>
-      </div>
     </body>
 </html>
