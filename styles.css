@@ -1,6 +1,9 @@
 #arjsDebugUIContainer{
     visibility: hidden;
 }
+.a-enter-vr-button{
+    visibility: hidden;
+}
 
 /* video[style] {
     height: 50% !important;
