@@ -31,8 +31,6 @@
               document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl");
             }
             document.getElementById("entity").setAttribute("scale", "0.3 0.3 0.3");
-            document.getElementById("entity").setAttribute("position", "0 0 0");
-            document.getElementById("entity").setAttribute("rotation", "0 0 0");
             reload();
             console.log("value: " + document.getElementById("plate-mtl").src);
           }
@@ -53,7 +51,7 @@
         
           
           <a-marker preset="hiro" id="marker">
-            <a-entity id="entity"><script>page.changeObj(1)</script></a-entity>
+            <a-entity id="entity" position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
             
           </a-marker>
           <a-entity camera></a-entity>
