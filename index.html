@@ -5,7 +5,7 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <script>
       function reload(){
-        var container = document.getElementById("scene");
+        var container = document.getElementById("marker");
         var content = container.innerHTML;
         container.innerHTML= content; 
 
@@ -21,15 +21,15 @@
           changeObj : function(i){
             if(i == 1)
             {
-              source = "ciuperci"
+              document.getElementById("marker").setAttribute("obj-model","obj: #ciuperci_obj; mtl: #ciuperci_mtl")
             }
             if(i == 2)
             {
-              source = "burger"
+              document.getElementById("marker").setAttribute("obj-model","obj: #burger_obj; mtl: #burger_mtl")
             }
             if(i == 3)
             {
-              source = "paste"
+              document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl")
             }
             reload();
             console.log("value: " + document.getElementById("plate-mtl").src);
@@ -39,19 +39,20 @@
       </script>
         <a-scene embedded arjs=’sourceType: webcam;’ id="scene">
           <a-assets>
-            <a-asset-item id="plate-obj"></a-asset-item>
-            <a-asset-item id="plate-mtl"></a-asset-item>
-            <script>
-              page.changeObj(1);
-              document.getElementById('plate-obj').setAttribute("src","public/models/obj/" + page.source + ".obj");
-              document.getElementById('plate-mtl').setAttribute("src","public/models/mtl/" + page.source + ".mtl");
-              </script>
+            <a-asset-item id="ciuperci_obj" src="public/models/obj/ciuperci.obj"></a-asset-item>
+            <a-asset-item id="ciuperci_mtl" src="public/models/mtl/ciuperci.mtl"></a-asset-item>
+
+            <a-asset-item id="burger_obj" src="public/models/obj/burger.obj"></a-asset-item>
+            <a-asset-item id="burger_mtl" src="public/models/mtl/burger.mtl"></a-asset-item>
+
+            <a-asset-item id="paste_obj" src="public/models/obj/paste.obj"></a-asset-item>
+            <a-asset-item id="paste_mtl" src="public/models/mtl/paste.mtl"></a-asset-item>
           </a-assets>
         
           
-          <a-marker preset="hiro">
-            <a-entity obj-model="obj: #plate-obj; mtl: #plate-mtl" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"><script>console.log("marker detected");</script></a-entity>
-            <!-- <a-entity gltf-model="public/models/gltf/ciuperci.gltf" position="0 0 0" rotation="90 0 0" scale="0.3 0.3 0.3"></a-entity> -->
+          <a-marker preset="hiro" id="marker">
+            <a-entity id="entity" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"><script>page.changeObj(1)</script></a-entity>
+            
           </a-marker>
           <a-entity camera></a-entity>
         </a-scene>
