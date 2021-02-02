@@ -9,11 +9,35 @@
         <option value="burger">Burger</option>
         <option value="paste">Paste</option>
       </select>
-      <button> Display</button>
+      <button onclick=""> Display</button>
+
+      <script>
+        var page = {
+          chengeObj : function(i){
+            if(i == 1)
+            {
+              document.getElementById("plate-obj").src="public/models/obj/ciuperci.obj"
+              document.getElementById("plate-mtl").src="public/models/obj/ciuperci.mtl"
+            }
+            if(i == 2)
+            {
+              document.getElementById("plate-obj").src="public/models/obj/burger.obj"
+              document.getElementById("plate-mtl").src="public/models/obj/burger.mtl"
+            }
+            if(i == 3)
+            {
+              document.getElementById("plate-obj").src="public/models/obj/paste.obj"
+              document.getElementById("plate-mtl").src="public/models/obj/paste.mtl"
+            }
+          }
+        }
+
+      </script>
         <a-scene embedded arjs=’sourceType: webcam;’>
           <a-assets>
-            <a-asset-item id="plate-obj" src="public/models/obj/ciuperci.obj"></a-asset-item>
-            <a-asset-item id="plate-mtl" src="public/models/mtl/ciuperci.mtl"></a-asset-item>
+            <a-asset-item id="plate-obj" ></a-asset-item>
+            <a-asset-item id="plate-mtl" ></a-asset-item>
+            <script>page.chengeObj(1);</script>
           </a-assets>
         
           
