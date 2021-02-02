@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="styles.css">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-    <body style=’margin:20px; overflow:hidden;’>
+    <body style=’margin:20px; overflow:hidden;’ id="body">
       <div style="height: 50%;">
       <script>
         var page = {
@@ -54,6 +54,17 @@
       <option value="3">Paste</option>
     </select>
     <button onclick="page.changeObj(document.getElementById('objects').value)"> Display</button>
+
+    <script>
+      function reload(){
+        var container = document.getElementById("body");
+        var content = container.innerHTML;
+        container.innerHTML= content; 
+
+        //this line is to watch the result in console , you can remove it later	
+        console.log("Refreshed"); 
+      }
+    </script>
 
 
 </html>
