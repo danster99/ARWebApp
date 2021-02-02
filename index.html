@@ -31,8 +31,11 @@
               document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl");
             }
             reload();
-            document.getElementById("entity").setAttribute("scale", "0.3 0.3 0.3");
-            console.log("value: " + document.getElementById("plate-mtl").src);
+            var scale = document.getElementById("entity").getAttribute("scale");
+            scale.x = 0.3;
+            scale.y=0.3;
+            scale.z=0.3;
+            document.getElementById("entity").setAttribute("scale", scale);
           }
         }
 
