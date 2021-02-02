@@ -5,15 +5,16 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <body style=’margin:20px; overflow:hidden;’>
       <select name="objects" id="objects" style="padding-top: 20px;">
-        <option value="ciuperci">Ciuperci</option>
-        <option value="burger">Burger</option>
-        <option value="paste">Paste</option>
+        <option value="1">Ciuperci</option>
+        <option value="2">Burger</option>
+        <option value="3">Paste</option>
       </select>
-      <button onclick=""> Display</button>
+      <button onclick="page.changeObj(document.getElementById('objects').value)"> Display</button>
+
 
       <script>
         var page = {
-          chengeObj : function(i){
+          changeObj : function(i){
             if(i == 1)
             {
               document.getElementById("plate-obj").src="public/models/obj/ciuperci.obj"
@@ -37,7 +38,7 @@
           <a-assets>
             <a-asset-item id="plate-obj" ></a-asset-item>
             <a-asset-item id="plate-mtl" ></a-asset-item>
-            <script>page.chengeObj(1);</script>
+            <script>page.changeObj(1);</script>
           </a-assets>
         
           
