@@ -14,23 +14,24 @@
       }
     </script>
     <body style=’margin:20px; overflow:hidden;’>
-      <div style="height: 50%;">
       <script>
         var page = {
           source: "ciuperci",
           changeObj : function(i){
             if(i == 1)
             {
-              document.getElementById("marker").setAttribute("obj-model","obj: #ciuperci_obj; mtl: #ciuperci_mtl")
+              document.getElementById("marker").setAttribute("obj-model","obj: #ciuperci_obj; mtl: #ciuperci_mtl");
             }
             if(i == 2)
             {
-              document.getElementById("marker").setAttribute("obj-model","obj: #burger_obj; mtl: #burger_mtl")
+              document.getElementById("marker").setAttribute("obj-model","obj: #burger_obj; mtl: #burger_mtl");
             }
             if(i == 3)
             {
-              document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl")
+              document.getElementById("marker").setAttribute("obj-model","obj: #paste_obj; mtl: #paste_mtl");
             }
+            document.getElementById("entity").setAttribute("scale", "0.3 0.3 0.3");
+            document.getElementById("entity").setAttribute("position", "0 0 0");
             reload();
             console.log("value: " + document.getElementById("plate-mtl").src);
           }
@@ -51,12 +52,11 @@
         
           
           <a-marker preset="hiro" id="marker">
-            <a-entity id="entity" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"><script>page.changeObj(1)</script></a-entity>
+            <a-entity id="entity"><script>page.changeObj(1)</script></a-entity>
             
           </a-marker>
           <a-entity camera></a-entity>
         </a-scene>
-      </div>
     </body>
 
 
