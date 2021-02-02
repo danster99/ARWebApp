@@ -4,14 +4,7 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <body style=’margin:20px; overflow:hidden;’>
-      <select name="objects" id="objects" style="padding-top: 20px;">
-        <option value="1">Ciuperci</option>
-        <option value="2">Burger</option>
-        <option value="3">Paste</option>
-      </select>
-      <button onclick="page.changeObj(document.getElementById('objects').value)"> Display</button>
-
-
+      <div style="height: 50%;">
       <script>
         var page = {
           changeObj : function(i){
@@ -30,6 +23,7 @@
               document.getElementById("plate-obj").src="public/models/obj/paste.obj"
               document.getElementById("plate-mtl").src="public/models/obj/paste.mtl"
             }
+            console.log("value: " + i);
           }
         }
 
@@ -48,5 +42,17 @@
           </a-marker>
           <a-entity camera></a-entity>
         </a-scene>
+      </div>
     </body>
+
+
+
+    <select name="objects" id="objects" style="padding-top: 20px;">
+      <option value="1">Ciuperci</option>
+      <option value="2">Burger</option>
+      <option value="3">Paste</option>
+    </select>
+    <button onclick="page.changeObj(document.getElementById('objects').value)"> Display</button>
+
+
 </html>
