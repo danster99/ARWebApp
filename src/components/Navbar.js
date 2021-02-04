@@ -2,11 +2,30 @@ import React,{useState} from 'react';
 import { Link } from "react-router-dom";
 import { AiOutlineEye } from "react-icons/ai";
 import { FaBars,FaTimes } from "react-icons/fa";
+import { Button } from './Button';
+import "./Navbar.css";
 
 function Navbar() {
-    const [click, setClick] = useState(false)
+    const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click)
+    const handleClick = () => setClick(!click);
+
+    const [button, setButton] = useState(true);
+
+    const closeMobileMenu = () => setClick(false);
+
+    const showButton = () => {
+        if (window.innerWidth<=960) 
+        {
+            setButton(false);
+        }
+        else
+        {
+            setButton(true);
+        }
+    }
+
+    window.addEventListener('resize', showButton);
 
     return(
         <>
@@ -19,6 +38,31 @@ function Navbar() {
                     <div className='menu-icon' onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars/>}
                     </div>
+                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                        <li class="nav-item">
+                            <Link to='/' class="nav-links">
+                                Home
+                            </Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to='/menu' class="nav-links">
+                                Menu
+                            </Link>
+                        </li>
+                        <li class="nav-btn">
+                            {button ? (
+                                <Link to='/sign-up' class="btn-linkk">
+                                    <Button buttonStyle='btn--outline'>Sign Up</Button>
+                                </Link>
+                            ):
+                            (
+                                <Link to='/sign-up' class="btn-link">
+                                    <Button buttonStyle='btn--outline' 
+                                            buttonSize='btn--mobile'>Sign Up</Button>
+                                </Link>
+                            )}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </>
