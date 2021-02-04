@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Visualizr</h1>
+      <h1>Welcome to Visualizr on Heroku</h1>
     </div>
   );
 }
