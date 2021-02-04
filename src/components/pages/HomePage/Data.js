@@ -37,5 +37,5 @@ export const homeObjThree = {
     buttonPath: '/team',
     imgStart: '',
     img: '/images/team.jpg',
-    alt: 'Restaurant'
+    alt: 'Our amazing team'
 };
