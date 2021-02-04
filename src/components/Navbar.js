@@ -16,8 +16,9 @@ function Navbar() {
                         <AiOutlineEye className='navbar-icon'/>
                         VISUALIZR
                     </Link>
-                    <div className='menu-icon' onClick={handleClick}/>
+                    <div className='menu-icon' onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars/>}
+                    </div>
                 </div>
             </div>
         </>
