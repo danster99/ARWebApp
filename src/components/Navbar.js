@@ -39,40 +39,40 @@ function Navbar() {
                     <div className='navbar-container container'>
                         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                             <AiOutlineEye className='navbar-icon'/>
-                            VISUALIZR
+                            VizAR
                         </Link>
                         <div className='menu-icon' onClick={handleClick}>
                         {click ? <FaTimes/> : <FaBars/>}
                         </div>
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                            <li class="nav-item">
-                                <Link to='/' class="nav-links" onClick={closeMobileMenu}>
+                            <li className="nav-item">
+                                <Link to='/' className="nav-links" onClick={closeMobileMenu}>
                                     Home
                                 </Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to='/menu' class="nav-links" onClick={closeMobileMenu}>
+                            <li className="nav-item">
+                                <Link to='/menu' className="nav-links" onClick={closeMobileMenu}>
                                     Menu
                                 </Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to='/location' class="nav-links" onClick={closeMobileMenu}>
+                            <li className="nav-item">
+                                <Link to='/location' className="nav-links" onClick={closeMobileMenu}>
                                     Location
                                 </Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to='/team' class="nav-links" onClick={closeMobileMenu}>
+                            <li className="nav-item">
+                                <Link to='/team' className="nav-links" onClick={closeMobileMenu}>
                                     Team
                                 </Link>
                             </li>
-                            <li class="nav-btn">
+                            <li className="nav-btn">
                                 {button ? (
-                                    <Link to='/reservation' class="btn-link" >
+                                    <Link to='/reservation' className="btn-link" >
                                         <Button buttonStyle='btn--outline'>Make a Reservation</Button>
                                     </Link>
                                 ):
                                 (
-                                    <Link to='/reservation' class="btn-link" onClick={closeMobileMenu}>
+                                    <Link to='/reservation' className="btn-link" onClick={closeMobileMenu}>
                                         <Button buttonStyle='btn--outline' 
                                                 buttonSize='btn--mobile'>Make a Reservation</Button>
                                     </Link>

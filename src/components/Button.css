@@ -1,5 +1,6 @@
 :root {
     --primary: #fff;
+    --secondary: #1c2237;
   }
   
   .btn {
@@ -22,6 +23,14 @@
     color: #fff;
     padding: 8px 20px;
     border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+  }
+
+  .btn--outlineDark {
+    background-color: #1c2237;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--secondary);
     transition: all 0.3s ease-out;
   }
   

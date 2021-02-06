@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="scanner.css">
+  </head>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-assets>
+        <a-asset-item id="ciuperci_obj" src="https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.obj"></a-asset-item>
+        <a-asset-item id="ciuperci_mtl" src="https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-marker preset="hiro">
+        <a-entity
+          position="0 0 0"
+          scale="0.5 0.5 0.5"
+          obj-model= "obj: #ciuperci_obj; mtl: #ciuperci_mtl"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

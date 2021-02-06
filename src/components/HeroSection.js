@@ -9,20 +9,20 @@ function HeroSection({lightBg, topLine, lightText, lightTextDesc, headline, desc
         <>
             <div className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}>
                 <div className="container">
-                    <div class="row home__hiro-row" style={{display:'flex', flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'}}>
-                        <div class="col">
-                            <div class="home_hero-text-wrapper">
-                                <div class="top-line">{topLine}</div>
+                    <div className="row home__hero-row" style={{display:'flex', flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'}}>
+                        <div className="col">
+                            <div className="home_hero-text-wrapper">
+                                <div className="top-line">{topLine}</div>
                                 <h1 className={lightText ? 'heading' : 'heading dark'}>{headline}</h1>
                                 <p className={lightTextDesc ? 'home__hero-subtitle' : 'home__hero-subtitle dark'}>{description}</p>
                                 <Link to={buttonPath}>
-                                    <Button buttonSize='btn__wide' buttonColor='blue'>{buttonLabel}</Button>
+                                    <Button buttonSize='btn__wide' buttonColor='red'>{buttonLabel}</Button>
                                 </Link>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="home_hero-img-wrapper">
-                                <img src={img} alt={alt} class="home__hero-img"/>
+                        <div className="col">
+                            <div className="home_hero-img-wrapper">
+                                <img src={img} alt={alt} className="home__hero-img"/>
                             </div>
                         </div>
                     </div>
