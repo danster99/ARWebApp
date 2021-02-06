@@ -8,15 +8,12 @@
   </head>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-assets>
-        <a-asset-item id="ciuperci_obj" src="https://cors-anywhere.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.obj"></a-asset-item>
-        <a-asset-item id="ciuperci_mtl" src="https://cors-anywhere.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.mtl"></a-asset-item>
-      </a-assets>
-
       <a-marker preset="hiro">
         <a-entity
-        fbx-model=”src: url(https://cors-anywhere.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.fbx);” >
-        </a-entity>
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.gltf"
+        ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
