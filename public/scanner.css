@@ -1,11 +1,8 @@
 video{  
     height: 90%  !important;
     top: 10% !important;
-    width: auto !important;
 }
-body{
-    width: auto !important;
-}
+
 
 .header {
     position: relative;
