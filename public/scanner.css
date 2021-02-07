@@ -4,22 +4,24 @@ video{
 }
 
 
+
 .header {
     position: relative;
     bottom: 0;
     left: 0;
-    width: auto;
     height: 10%;
+    width: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     align-items:center;
+    padding-right: 20%;
     background-color: #1c2237;
     z-index: 1;
 }
 
 .back-button {
-    padding: 0.25em;
-    margin-right: 5%;
+    padding: 0.1em;
+    margin-right: 17%;
     border-radius: 4px;
     border: none;
     background: white;
@@ -34,7 +36,7 @@ video{
 
 h1 {
    color: white;
-   margin-left: 30%;
+   margin-right: 25%;
    font-family: 'PT Sans', sans-serif;
    font-weight: 200;
 }
