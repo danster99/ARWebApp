@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <!-- we import arjs version without NFT but with marker + location based support -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <link rel="stylesheet" href="scanner.css">
-  </head>
+  <link rel="stylesheet" href="scanner.css">
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script>
+    window.onload = function () {
+      document
+        .querySelector(".say-hi-button")
+        .addEventListener("click", function () {
+          
+        });
+    };
+  </script>
   <body style="margin : 0px; overflow: hidden;">
+    <div class="header">
+      <img src=""/>
+      <h1>ViAR</h1>
+      <button class="back-button"><a href="/menu">BACK</a></button>
+    </div>
     <a-scene embedded arjs>
       <a-marker preset="hiro">
         <a-entity
+          id="model"
           position="0 0 0"
           scale="0.5 0.5 0.5"
-          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/ciuperci.gltf"
+          gltf-model=""
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+    <script>
+      const params = new URLSearchParams(document.location.search);
+      const s = params.get("item");
+      console.info(s);
+      document.getElementById("model").setAttribute('gltf-model',"https://arjs-cors-proxy.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/"+s.toString()+".gltf")
+    </script>
   </body>
 </html>

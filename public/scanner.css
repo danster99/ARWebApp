@@ -1,5 +1,43 @@
-video{
-    height: 90% !important;
-    position: absolute !important;
-    margin-top: 0px !important;
+video{  
+    height: 90%  !important;
+    top: 10% !important;
+    width: auto !important;
+}
+body{
+    width: auto !important;
+}
+
+.header {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #1c2237;
+    z-index: 1;
+}
+
+.back-button {
+    padding: 0.25em;
+    margin-right: 5%;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    color: black;
+    width: 4em;
+    height: 2em;
+}
+
+.a-enter-vr-button{
+    visibility: hidden;
+}
+
+h1 {
+   color: white;
+   margin-left: 30%;
+   font-family: 'PT Sans', sans-serif;
+   font-weight: 200;
 }
