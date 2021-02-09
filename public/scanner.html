@@ -3,7 +3,9 @@
   <link rel="stylesheet" href="scanner.css">
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
+  <script src="libs/inflate.min.js"></script>
+  <!-- <script>
     window.onload = function () {
       document
         .querySelector(".say-hi-button")
@@ -11,7 +13,7 @@
           
         });
     };
-  </script>
+  </script> -->
   <div class="header">
     <img src=""/>
     <h1>ViAR</h1>
@@ -24,8 +26,8 @@
         <a-entity
           id="model"
           position="0 0 0"
-          scale="0.5 0.5 0.5"
-          gltf-model=""
+          scale="2 2 2"
+
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
@@ -34,7 +36,8 @@
       const params = new URLSearchParams(document.location.search);
       const s = params.get("item");
       console.info(s);
-      document.getElementById("model").setAttribute('gltf-model',"https://arjs-cors-proxy.herokuapp.com/https://visualizr-models-storage-bucket.s3.eu-de.cloud-object-storage.appdomain.cloud/"+s.toString()+".gltf")
+      document.getElementById("model").setAttribute('obj-model',"obj: url(https://test-models.s3.us-west-000.backblazeb2.com/"+s.toString()+".obj); mtl: url(https://test-models.s3.us-west-000.backblazeb2.com/"+s.toString()+".mtl)");
+      
     </script>
   </body>
 </html>

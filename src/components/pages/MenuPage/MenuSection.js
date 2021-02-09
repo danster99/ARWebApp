@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DataPasta,DataBurger } from './Data';
+import { DataOverall } from './Data';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
@@ -12,8 +12,8 @@ const AccordionSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
   background: #fff;
+  padding-bottom: 20%;
 `;
 
 const Container = styled.div`
@@ -76,30 +76,40 @@ const Accordion = () => {
   };
   
   return (
+    <div style={{paddingBottom:'20%'}}>
     <IconContext.Provider value={{ color: '#ffff', size: '25px' }}>
-      <h1 style={{color:'#1c2237', marginTop:'10%'}}>Legume</h1>
-      <AccordionSection>
-        <Container>
-          {DataPasta.map((item, index) => {
-            return (
-              <>
-                <Wrap onClick={() => toggle(index)} key={index}>
-                  <h3>{item.name}</h3>
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                </Wrap>
-                {clicked === index ? (
-                  <Dropdown>
-                    <p>{item.description}</p>
-                    <p>Price: {item.price} </p>
-                    <div style={{padding:'3% 30%'}} ><Button buttonStyle='btn--primary' onClick={function() { redirect('ciuperci'); }}>View in 3D</Button></div>  
-                  </Dropdown>
-                ) : null}
-              </>
-            );
-          })}
-        </Container>
-      </AccordionSection>
+      {DataOverall.map((subclass, subIndex) => {
+        return (
+          <>
+          <h1 style={{color:'#1c2237', marginTop:'10%'}}>{subclass.type}</h1>
+          <AccordionSection>
+            <Container>
+              {subclass.variable.map((item, index) => {
+                index=subIndex*100+index;
+                return (
+                  <>
+                    <Wrap onClick={() => toggle(index)} key={index}>
+                      <h3>{item.name}</h3>
+                      <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                    </Wrap>
+                    {clicked === index ? (
+                      <Dropdown>
+                        <p>{item.description}</p>
+                        <p>Price: {item.price} </p>
+                        <div style={{padding:'3% 30%'}} ><Button buttonStyle='btn--primary' onClick={function() { redirect(item.name.toString().toLowerCase().replace(" ","-")); }}>View in 3D</Button></div>  
+                      </Dropdown>
+                    ) : null}
+                  </>
+                );
+              })}
+            </Container>
+          </AccordionSection>
+          </>
+        );
+      })}
+      
     </IconContext.Provider>
+    </div>
   );
 };
 
