@@ -13,7 +13,8 @@ const AccordionSection = styled.div`
   justify-content: center;
   position: relative;
   background: #fff;
-  padding-bottom: 20%;
+  padding-bottom: 15%;
+  height: auto;
 `;
 
 const Container = styled.div`
@@ -76,13 +77,13 @@ const Accordion = () => {
   };
   
   return (
-    <div style={{paddingBottom:'20%'}}>
+    <div style={{paddingBottom:'40%'}}>
     <IconContext.Provider value={{ color: '#ffff', size: '25px' }}>
       {DataOverall.map((subclass, subIndex) => {
         return (
           <>
-          <h1 style={{color:'#1c2237', marginTop:'10%'}}>{subclass.type}</h1>
-          <AccordionSection>
+          <h1 id={"item"+subIndex} style={{color:'#1c2237', marginTop:'20%'}}>{subclass.type}</h1>
+          <AccordionSection >
             <Container>
               {subclass.variable.map((item, index) => {
                 index=subIndex*100+index;
