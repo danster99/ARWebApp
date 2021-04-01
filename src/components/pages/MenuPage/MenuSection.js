@@ -97,7 +97,7 @@ const Accordion = () => {
                       <Dropdown>
                         <p>{item.description}</p>
                         <p>Price: {item.price} </p>
-                        <div style={{padding:'3% 30%'}} ><Button buttonStyle='btn--primary' onClick={function() { redirect(item.name.toString().toLowerCase().replace(" ","-")); }}>View in 3D</Button></div>  
+                        <div style={{padding:'3% 30%'}} ><Button buttonStyle='btn--primary' onClick={function() { redirect(item.name.toString().toLowerCase().replace(" ","_")); }}>View in 3D</Button></div>  
                       </Dropdown>
                     ) : null}
                   </>
