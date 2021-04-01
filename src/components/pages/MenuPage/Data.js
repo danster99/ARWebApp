@@ -12,7 +12,7 @@ export const DataLegume = [
 export const DataBurger = [
     
     {
-      name: 'Mic Dejun_V1',
+      name: 'Mic Dejun V1',
       description: 'A labracadabrador.',
       price: '30 lei'
     } 
