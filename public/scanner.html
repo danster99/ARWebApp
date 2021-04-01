@@ -36,7 +36,7 @@
       const params = new URLSearchParams(document.location.search);
       const s = params.get("item");
       console.info(s);
-      document.getElementById("model").setAttribute('obj-model',"obj: url(https://test-models.s3.us-west-000.backblazeb2.com/test/"+s.toString()+".obj); mtl: url(https://test-models.s3.us-west-000.backblazeb2.com/"+s.toString()+".mtl)");
+      document.getElementById("model").setAttribute('obj-model',"obj: url(https://test-models.s3.us-west-000.backblazeb2.com/test/"+s.toString()+".obj); mtl: url(https://test-models.s3.us-west-000.backblazeb2.com/test"+s.toString()+".mtl)");
       
     </script>
   </body>
