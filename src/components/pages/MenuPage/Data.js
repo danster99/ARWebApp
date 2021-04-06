@@ -22,7 +22,11 @@ export const DataBurger = [
 
   export const DataOverall =[
     {
-      type: 'Test',
+      type: 'Backblaze',
       variable: DataBurger
+    },
+    {
+      type: 'Heroku',
+      variable: DataLegume
     }
   ];
