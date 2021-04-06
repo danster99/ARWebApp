@@ -36,7 +36,7 @@
       const params = new URLSearchParams(document.location.search);
       const s = params.get("item");
       console.info(s);
-      document.getElementById("model").setAttribute('obj-model',"obj: url(/public/models/"+s.toString()+".obj); mtl: url(/public/models/"+s.toString()+".mtl)");
+      document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+s.toString()+".obj); mtl: url(/models/"+s.toString()+".mtl)");
       
     </script>
   </body>
