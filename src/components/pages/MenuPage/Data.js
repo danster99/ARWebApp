@@ -1,11 +1,12 @@
 
 
 export const DataLegume = [
-    {
-      name: 'Ciuperci',
-      description: 'O farfurie plina de ciuperci.',
-      price: '30 lei'
-    }
+  {
+    name: 'Mic Dejun Off',
+    description: 'A labracadabrador.',
+    price: '30 lei',
+    off: true
+  } 
   ];
 
 
@@ -14,7 +15,8 @@ export const DataBurger = [
     {
       name: 'Mic Dejun V1',
       description: 'A labracadabrador.',
-      price: '30 lei'
+      price: '30 lei',
+      off: false
     } 
   ];
 
