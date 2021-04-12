@@ -6,6 +6,30 @@ export const DataLegume = [
     description: 'A labracadabrador.',
     price: '30 lei',
     off: true
+  },
+  {
+    name: 'Rib Eye',
+    description: 'A labracadabrador.',
+    price: '30 lei',
+    off: true
+  },
+  {
+    name: 'Burger',
+    description: 'A labracadabrador.',
+    price: '30 lei',
+    off: true
+  },
+  {
+    name: 'Paste',
+    description: 'A labracadabrador.',
+    price: '30 lei',
+    off: true
+  },
+  {
+    name: 'Pizza',
+    description: 'A labracadabrador.',
+    price: '30 lei',
+    off: true
   } 
   ];
 
