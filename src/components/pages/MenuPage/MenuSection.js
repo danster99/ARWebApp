@@ -97,7 +97,7 @@ const Accordion = () => {
                       <Dropdown>
                         <p>{item.description}</p>
                         <p>Price: {item.price} </p>
-                        <div style={{padding:'3% 30%'}} ><Button buttonStyle='btn--primary' onClick={function() { redirect(item.name.toString().toLowerCase().replace(/ /g,"_"), item.off); }}>View in 3D</Button></div>  
+                        <div style={{padding:'3% 30%'}} ><Button buttonStyle='btn--primary' onClick={function() { redirect(item.name.toString().toLowerCase().replace(/ /g,"_")); }}>View in 3D</Button></div>  
                       </Dropdown>
                     ) : null}
                   </>
@@ -114,17 +114,11 @@ const Accordion = () => {
   );
 };
 
-function redirect(item, off){
+function redirect(item){
   if(item !== null)
   {
-    if(off)
-    {
-      window.location.href = "/scanner_off.html?item="+item;
-    }
-    else
-    {
       window.location.href = "/scanner.html?item="+item;
-    }
+
   }
 };
 
