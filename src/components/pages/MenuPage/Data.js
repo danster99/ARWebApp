@@ -2,7 +2,7 @@
 
 export const DataLegume = [
   {
-    name: 'Mic Dejun Off',
+    name: 'Mic Dejun',
     description: 'A labracadabrador.',
     price: '30 lei',
     off: true
@@ -13,18 +13,18 @@ export const DataLegume = [
 export const DataBurger = [
     
     {
-      name: 'Mic Dejun V1',
-      description: 'A labracadabrador.',
-      price: '30 lei',
+      name: '',
+      description: '',
+      price: '',
       off: false
     } 
   ];
 
   export const DataOverall =[
-    {
-      type: 'Backblaze',
-      variable: DataBurger
-    },
+    // {
+    //   type: 'Backblaze',
+    //   variable: DataBurger
+    // },
     {
       type: 'Heroku',
       variable: DataLegume
