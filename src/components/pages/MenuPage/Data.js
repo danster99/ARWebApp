@@ -37,17 +37,7 @@ export const DataLegume = [
     price: '30 lei',
   },
   {
-    name: 'Pastes2',
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Paste2hq',
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Paste2hq2',
+    name: 'Rodie',
     description: 'A labracadabradora.',
     price: '30 lei',
   }
