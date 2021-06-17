@@ -48,7 +48,7 @@ export const DataLegume = [
   }
   ,
   {
-    name: 'Rodiebanana',
+    name: 'Oupepaine',
     description: 'A labracadabradora.',
     price: '30 lei',
   }
