@@ -22,7 +22,7 @@ void setup() {
 
 void loop() {
 
-  digitalWrite(dirPin, HIGH);
+  digitalWrite(dirPin,LOW);
   digitalWrite(enabledPin, HIGH);
   
   int nrOfPhotos = 0;
@@ -95,10 +95,10 @@ void MoveTurntable(int degreesPerPhoto)
    for (int i = 0; i < stepsFromDeg(degreesPerPhoto); i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(200);
+    delayMicroseconds(2500);              
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(200);
-  }
+    delayMicroseconds(2500);
+  }       
 }
 
 int stepsFromDeg(int deg)
