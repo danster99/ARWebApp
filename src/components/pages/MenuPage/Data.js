@@ -32,27 +32,17 @@ export const DataLegume = [
     price: '30 lei',
   },
   {
-    name: 'Rodieblendr',
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Rodienou',
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Rodiecorectat',
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
     name: 'Oupepaine',    
     description: 'A labracadabradora.',
     price: '30 lei',
   },
   {
     name: 'Perdele',    
+    description: 'A labracadabradora.',
+    price: '30 lei',
+  },
+  {
+    name: 'Caracatita',    
     description: 'A labracadabradora.',
     price: '30 lei',
   }
