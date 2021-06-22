@@ -81,6 +81,7 @@ void loop() {
       MoveTurntable(increment);
     }
     Serial.println("Horizontal Finished");
+    TurnLeds(false);
     currentWord.clear();
     delay(1000);
     digitalWrite(enabledPin, HIGH);
@@ -104,4 +105,20 @@ void MoveTurntable(int degreesPerPhoto)
 int stepsFromDeg(int deg)
 {
   return (stepsPerRev*deg)/360;
+}
+
+void TurnLeds(bool signal)
+{
+  if(signal)
+  {
+    for(int i=0;i<NUM_LEDS;i++)
+      leds[i] = CRGB(255, 160, 140);
+    FastLED.show();
+  }
+  else
+  {
+    for(int i=0;i<NUM_LEDS;i++)
+      leds[i] = CRGB(0, 0, 0);
+    FastLED.show();
+  }
 }
