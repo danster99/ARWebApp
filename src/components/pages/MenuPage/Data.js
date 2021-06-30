@@ -62,7 +62,7 @@ export const DataLegume = [
     price: '30 lei',
   },
   {
-    name: 'Pastenoi',    
+    name: 'Pastecarbonara',    
     description: 'A labracadabradora.',
     price: '30 lei',
   }
