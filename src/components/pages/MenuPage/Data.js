@@ -65,6 +65,11 @@ export const DataLegume = [
     name: 'Pastecarbonara',    
     description: 'A labracadabradora.',
     price: '30 lei',
+  },
+  {
+    name: 'Micdejunnou',    
+    description: 'A labracadabradora.',
+    price: '30 lei',
   }
   ];
 
