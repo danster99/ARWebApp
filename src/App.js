@@ -12,8 +12,8 @@ function App() {
     <Router>
       <Navbar/>
       <Switch>
-        <Route path='/' exact component={Home}/>
-        <Route exact path="/menu" exact component={MenuSection} />
+        <Route path='/home' exact component={Home}/>
+        <Route exact path="/demo-client" exact component={MenuSection} />
       </Switch>
       <Footer/>
     </Router>
