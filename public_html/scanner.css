@@ -1,0 +1,42 @@
+video{  
+    height: 90%  !important;
+    top: 10% !important;
+}
+
+
+
+.header {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: auto;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-right: 20%;
+    background-color: #1c2237;
+    z-index: 1;
+}
+
+.back-button {
+    padding: 0.1em;
+    margin-right: 17%;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    color: black;
+    width: 4em;
+    height: 2em;
+}
+
+.a-enter-vr-button{
+    visibility: hidden;
+}
+
+h1 {
+   color: white;
+   margin-right: 25%;
+   font-family: 'PT Sans', sans-serif;
+   font-weight: 200;
+}

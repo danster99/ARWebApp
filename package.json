@@ -1,6 +1,7 @@
 {
-  "name": "arwebapp",
+  "name": "viar-eu",
   "version": "0.1.0",
+  "homepage": "https://www.viar-eu.com",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.1",
