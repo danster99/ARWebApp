@@ -1,105 +1,59 @@
 
 
-export const DataLegume = [
+export const Starters = [
   {
-    name: 'Mic Dejun',
-    description: 'A labracadabrador.',
-    price: '30 lei',
-  },
-  {
-    name: 'Rib Eye',
-    description: 'A labracadabrador.',
-    price: '30 lei',
-  },
-  {
-    name: 'Burger',
-    description: 'A labracadabrador.',
-    price: '30 lei',
-  },
-  {
-    name: 'Paste',
-    description: 'A labracadabrador.',
-    price: '30 lei',
-  },
-  {
-    name: 'Pizza',
-    description: 'A labracadabrador.',
-    price: '30 lei',
-  },
-  {
-    name: 'Ciuperca',
-    description: 'A labracadabrador.',
-    price: '30 lei',
-  },
-  {
-    name: 'Oupepaine',    
+    name: 'Wedges',    
     description: 'A labracadabradora.',
     price: '30 lei',
-  },
+  }  
+  ];
+
+  export const EarlyFoods = [
+    
+    {
+      name: 'Micdejunnou',    
+      description: 'A labracadabradora.',
+      price: '30 lei',
+    },
+    {
+      name: 'Brunch',    
+      description: 'A labracadabradora.',
+      price: '30 lei',
+    },
+  ];
+export const Pizzas = [ 
   {
-    name: 'Perdele',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Caracatita',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Cartofi',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Cartofihq',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Cartofihqtm',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Pastecarbonara',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Micdejunnou',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'Brunch',    
-    description: 'A labracadabradora.',
-    price: '30 lei',
-  },
-  {
-    name: 'RisottoOk',    
+    name: 'Pizza',    
     description: 'A labracadabradora.',
     price: '30 lei',
   }
   ];
 
+export const Pastas = [
 
-export const DataBurger = [
-    
-    {
-      name: '',
-      description: '',
-      price: '',
-    } 
-  ];
+  {
+    name: 'Pastecarbonara',    
+    description: 'A labracadabradora.',
+    price: '30 lei',
+  }
+]
 
   export const DataOverall =[
-    // {
-    //   type: 'Backblaze',
-    //   variable: DataBurger
-    // },
+
     {
-      type: 'Heroku',
-      variable: DataLegume
+      type: 'Starters',
+      variable: Starters
+    },
+    {
+      type: 'Early Foods',
+      variable: EarlyFoods
+    },
+    {
+      type: 'Pizzas',
+      variable: Pizzas
+    },
+    {
+      type: 'Pastas',
+      variable: Pastas
     }
   ];
