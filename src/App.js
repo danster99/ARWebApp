@@ -10,12 +10,19 @@ import MenuSection from './components/pages/MenuPage/MenuSection';
 function App() {
   return (
     <Router>
-      <Navbar/>
       <Switch>
-        <Route path='/home' exact component={Home}/>
+        <Route exact path='/home'>
+          <Navbar/>
+          <Home/>
+          <Footer/>
+        </Route>
+        <Route exact path='/' >
+          <Navbar/>
+          <Home/>
+          <Footer/>
+        </Route>
         <Route exact path="/demo-client" exact component={MenuSection} />
       </Switch>
-      <Footer/>
     </Router>
   );
 }

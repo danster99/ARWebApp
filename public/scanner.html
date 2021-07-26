@@ -23,14 +23,16 @@
     
     <a-scene embedded arjs light="defaultLightsEnabled: false">
       <a-marker preset="hiro">
-        <a-entity
-          id="model"
-          position="0 0 0"
-          scale="20 20 20"
-          material="shader: flat"
-
-        ></a-entity>
-        <a-entity light="type: ambient; color: #FFF; intensity: 1.5"></a-entity>
+        <a-entity>
+            <a-entity
+            id="model"
+            position="0 0 0"
+            scale="20 20 20"
+            material="shader: flat"
+            ></a-entity>
+            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity light="type: ambient; color: #FFF; intensity: 1.5"></a-entity>
+        </a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
