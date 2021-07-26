@@ -28,7 +28,7 @@ function redirect(item){
 
 const Accordion = withStyles({
   root: {
-    border: '3px solid rgba(255, 255, 255, 1)',
+    border: '10px solid rgba(255, 255, 255, 1)',
     backgroundColor: '#1c2237',
     color:'#fff',
     boxShadow: 'none',
@@ -47,7 +47,7 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: 'rgba(0, 0, 0, .03)',
+    backgroundColor: 'rgba(0, 0, 0, 0)',
     borderBottom: '0px solid rgba(0, 0, 0, .125)',
     marginBottom: -1,
     minHeight: 56,

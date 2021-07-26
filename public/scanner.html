@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html>
   <link rel="stylesheet" href="scanner.css">
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
   <script src="libs/inflate.min.js"></script>
-  <!-- <script>
-    window.onload = function () {
-      document
-        .querySelector(".say-hi-button")
-        .addEventListener("click", function () {
-          
-        });
-    };
-  </script> -->
+
   <div class="header">
     <img src=""/>
     <h1>ViAR</h1>
-    <button class="back-button"><a href="/menu">BACK</a></button>
+    <button class="back-button"><a href="/demo-client">BACK</a></button>
   </div>
   <body style="margin : 0px; overflow: hidden;">
-    
+    <div id="preloader" style="height: 200%; width: 100%; background-color: #1c2237; visibility: visible; padding-top: 45%;">
+      <img src="/images/logo-viar.jpg" class="rotate" width="100" height="100"/>
+      <h2 style="margin-left: 35%; display: block; margin-right: 30%; color: white; font-family:'PT Sans'; font-weight: 100; width:auto">Loading your model...</h2>
+    </div>
     <a-scene embedded arjs light="defaultLightsEnabled: false">
-      <a-marker preset="hiro">
-        <a-entity>
-            <a-entity
-            id="model"
-            position="0 0 0"
-            scale="20 20 20"
-            material="shader: flat"
-            ></a-entity>
-            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+      <a-marker preset='custom' type='pattern' url='pattern-pp.patt'>
+          <a-entity
+          id="model"
+          position="0 0 0"
+          scale="20 20 20"
+          material="shader: flat"
+          animation="property: rotation; dur: 10000; to: 0 360 0; easing: linear; loop: true"></a-entity>
           <a-entity light="type: ambient; color: #FFF; intensity: 1.5"></a-entity>
-        </a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
     <script>
       const params = new URLSearchParams(document.location.search);
       const s = params.get("item");
-      console.info(s);
-      document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+s.toString()+"/"+s.toString()+".obj); mtl: url(/models/"+s.toString()+"/"+s.toString()+".mtl)");
-      
+      var script = document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+s.toString()+"/"+s.toString()+".obj); mtl: url(/models/"+s.toString()+"/"+s.toString()+".mtl)");
+      const loader = new THREE.OBJLoader();
+      loader.load("/models/"+s.toString()+"/"+s.toString()+".obj", function()
+      {
+        console.log("dasdasd");
+        document.getElementById("preloader").setAttribute("style", "visibility: hidden");
+      })
     </script>
   </body>
 </html>

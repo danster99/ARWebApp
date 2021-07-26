@@ -21,7 +21,9 @@ function App() {
           <Home/>
           <Footer/>
         </Route>
-        <Route exact path="/demo-client" exact component={MenuSection} />
+        <Route exact path="/demo-client">
+          <MenuSection/>
+        </Route>
       </Switch>
     </Router>
   );
