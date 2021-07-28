@@ -26,6 +26,11 @@ export const Pizzas = [
     name: 'Pizza',    
     description: 'A labracadabradora.',
     price: '30 lei',
+  },
+  {
+    name: 'Pizzaag',    
+    description: 'A labracadabradora.',
+    price: '30 lei',
   }
   ];
 
