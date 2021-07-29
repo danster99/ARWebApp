@@ -6,22 +6,17 @@ video{
 
 
 .header {
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     height: 10%;
-    width: auto;
     display: flex;
-    justify-content:flex-end;
-    align-items:center;
-    padding-right: 20%;
     background-color: #1c2237;
     z-index: 1;
 }
 
 .back-button {
     padding: 0.1em;
-    margin-right: 17%;
     border-radius: 4px;
     border: none;
     background: white;
@@ -41,7 +36,7 @@ h1 {
    font-weight: 200;
 }
 
-.loader-image {
+ .loader-image {
     animation: rotation 8s infinite linear;
     margin-left: auto;
     margin-right: auto;
@@ -57,3 +52,13 @@ h1 {
       transform: rotate(359deg);
     }
   }
+
+
+  .fill-window {
+    background-color: #1c2237;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}

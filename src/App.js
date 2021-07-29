@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './components/pages/HomePage/Home';
 import Footer from './components/pages/Footer/Footer';
 import MenuSection from './components/pages/MenuPage/MenuSection';
+import Scanner from './components/pages/Scanner/Scanner';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route exact path="/demo-client">
           <MenuSection/>
+        </Route>
+      <Route path="/scanner">
+          <Scanner/>
         </Route>
       </Switch>
     </Router>

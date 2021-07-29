@@ -20,7 +20,7 @@ import { FaFileExcel } from 'react-icons/fa';
 function redirect(item){
   if(item !== null)
   {
-      window.location.href = "/scanner.html?item="+item;
+      window.location.href = "/scanner?item="+item;
 
   }
 };
