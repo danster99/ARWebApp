@@ -21,13 +21,27 @@ export const Starters = [
       price: '30 lei',
     },
   ];
+
 export const Pizzas = [ 
   {
     name: 'Pizza',    
     description: 'A labracadabradora.',
     price: '30 lei',
   }
-  ];
+];
+
+export const MainCourses = [ 
+  {
+    name: 'Steak',    
+    description: 'A labracadabradora.',
+    price: '30 lei',
+  },
+  {
+    name: 'Burger',    
+    description: 'A labracadabradora.',
+    price: '30 lei',
+  }
+];
 
 export const Pastas = [
 
@@ -55,5 +69,9 @@ export const Pastas = [
     {
       type: 'Pastas',
       variable: Pastas
+    },
+    {
+      type: 'Main Courses',
+      variable: MainCourses
     }
   ];
