@@ -8,6 +8,7 @@ import MenuSection from './components/pages/MenuPage/MenuSection';
 import Scanner from './components/pages/Scanner/Scanner';
 
 
+
 function App() {
   return (
     <Router>
