@@ -1,4 +1,4 @@
-AccordionSection{
+/* AccordionSection{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,4 +50,52 @@ Dropdown{
 
 p {
     font-size: 2rem;
+  } */
+
+.background-img {
+    opacity: 0.6;
+    position: sticky;
+    left: 0;
+    top: 10vh;
+    height: 90vh;
+    object-fit: cover;
+    z-index: 0;
   }
+
+.content{
+  position:relative;
+  margin-top: -100vh;
+  top: 0px;
+  padding-bottom: 10vh;
+  padding-top: 10vh;
+}
+
+.food-category{
+  margin-left: 4vw;
+  margin-right: 4vw;
+  box-shadow: -10px 10px 5px  rgba(0, 0, 0, .7);
+}
+
+p{
+  color: rgba(0, 0, 0, 1);
+}
+
+.header{
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+  position: sticky;
+  display: block;
+  background-color: white;
+  /* background-color: rgb(143	, 171, 162, 1); */
+  z-index: 100;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo{
+  height: 18vh;
+  width: auto;
+  margin: -10vh 50%;
+  transform: translate(-50%, 25%);
+}
