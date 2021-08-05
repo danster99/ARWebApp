@@ -54,7 +54,7 @@ p {
 
 .background-img {
     opacity: 0.6;
-    position: sticky;
+    position: -webkit-sticky;
     left: 0;
     top: 10vh;
     height: 90vh;
