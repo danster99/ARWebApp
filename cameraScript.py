@@ -38,6 +38,8 @@ while True:
 
     counter = 0
 
+    time.sleep(2)
+    
     for i in range(vSteps) :
         if i == 0 :
             perStepCounter = photosPerVert + diff
