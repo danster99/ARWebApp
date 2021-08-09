@@ -9,6 +9,7 @@ import  "./MenuSection.css"
 
 
 
+
 import { withStyles } from '@material-ui/core/styles';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -66,6 +67,7 @@ const AccordionSummary = withStyles({
 const AccordionDetails = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
+    // paddingBottom: '0% !important',
     alignItems:'center',
     color:'#fff',
     justifyContent:'space-between'
@@ -90,8 +92,8 @@ export default function CustomizedAccordions() {
         {DataOverall.map((subclass, subIndex) => {
         return (
           <>
-            <h1 id={"item"+subIndex} style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.type}</h1>
-              <div className="food-category">
+            <h1 id={"item"+subIndex} className="font-face-fbi" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.name}</h1>
+              <div className="food-category font-face-fbk">
                 {subclass.variable.map((item, index) => {
                 index=subIndex*100+index;
                 return (
@@ -100,14 +102,14 @@ export default function CustomizedAccordions() {
                   <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
                   aria-controls="panel1a-content"
                   id="panel1a-header">
-                    <Typography style={{fontSize:'24px'}}>{item.name}</Typography>
+                    <h2 className="font-face-fbk">{item.name}</h2>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography style={{width:'100%', alignItems:'center'}}>
-                      <p>{item.description}</p>
-                      <p>Price: {item.price}</p>
-                      <div style={{padding:'3% 30%'}} >
-                        <Button buttonStyle='btn--primary' buttonSize='btn--mobile' onClick={function() { redirect(item.name.toString().toLowerCase().replace(/ /g,"_")); }}>View in 3D</Button>
+                    <Typography style={{width:'100%', alignItems:'center', fontFamily:"FuturaBook"}}>
+                      <p className="font-face-fbk">{item.description}</p>
+                      <p className="font-face-fbk">Pret: {item.price}</p>
+                      <div style={{padding:'0% 30%', margin:'auto'}} >
+                        <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={function() { redirect(item.model.toString()); }}>View in 3D</Button>
                       </div> 
                     </Typography>
                   </AccordionDetails>

@@ -48,10 +48,12 @@
     text-align: center;
     border-radius: 15px;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     padding: 7px 2px;
-    width: 90% !important;
+    margin-left: 10%;
+    width: 80% !important;
+    font-family: "FuturaBook";
   }
   
   .btn--wide {

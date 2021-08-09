@@ -12,17 +12,15 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/home'>
-          <Navbar/>
-          <Home/>
-          <Footer/>
+          <MenuSection/>
         </Route>
         <Route exact path='/' >
-          <Navbar/>
-          <Home/>
-          <Footer/>
+          <MenuSection/>
         </Route>
         <Route exact path="/demo-client">
-          <MenuSection/>
+        <Navbar/>
+          <Home/>
+          <Footer/>
         </Route>
       </Switch>
     </Router>

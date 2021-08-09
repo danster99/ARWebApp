@@ -52,13 +52,36 @@ p {
     font-size: 2rem;
   } */
 
+@font-face {
+  font-family: "FuturaBoldItalic";
+  src: local("FuturaBoldItalic"),
+  url("/src/fonts/Futura/FuturaBoldItalicfont.ttf");
+}
+
+@font-face {
+  font-family: "FuturaBook";
+  src: local("FuturaBook"),
+  url("/src/fonts/Futura/FuturaBookfont.ttf");
+}
+
+.font-face-fbi{
+  font-family:"FuturaBoldItalic";
+}
+
+.font-face-fbk{
+  font-family:"FuturaBook" !important;
+}
+
+
 .background-img {
     opacity: 0.6;
     position: -webkit-sticky;
+    position: sticky;
     left: 0;
     top: 10vh;
     height: 90vh;
     object-fit: cover;
+    background-attachment: initial;
     z-index: 0;
   }
 
