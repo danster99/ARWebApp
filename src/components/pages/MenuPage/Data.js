@@ -1,12 +1,5 @@
 
 
-// export const Starters = [
-//   {
-//     name: 'Wedges',    
-//     description: 'A labracadabradora.',
-//     price: '30 lei',
-//   }  
-//   ];
 
 export const EarlyFoods = [
   
@@ -22,6 +15,12 @@ export const EarlyFoods = [
     description: 'Clatiat cu spanac, oua, avocado, branza feta, rosii.',
     price: '25 lei',
   },
+  {
+    name: 'Bruschetta',
+    model:'bruschete',    
+    description: 'Clatiat cu spanac, oua, avocado, branza feta, rosii.',
+    price: '25 lei',
+  }
 ];
 
 export const Pizzas = [ 
@@ -46,6 +45,7 @@ export const MainCourses = [
     description: 'Chifla de casa, carne de vita, cartofi, rosie, ceapa, salata.',
     price: '45 lei',
   }
+  
 ];
 
 export const Pastas = [
@@ -54,7 +54,13 @@ export const Pastas = [
     name: 'Pasta carbonara',
     model:'pastecarbonara', 
     description: 'Paste integrale, guanciale, ou, parmezan.',
-    price: '30 lei',
+    price: '32 lei',
+  },
+  {
+    name: 'Pasta arrabiata',
+    model:'pastearrabiata', 
+    description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
+    price: '28 lei',
   }
 ];
 
@@ -70,10 +76,7 @@ export const NeaIancu = [
 
   export const DataOverall =[
 
-    // {
-    //   type: 'Starters',
-    //   variable: Starters
-    // },
+    
     {
       name: 'Early Foods',
       variable: EarlyFoods
@@ -90,8 +93,8 @@ export const NeaIancu = [
       name: 'Main Courses',
       variable: MainCourses
     },
-    {
-      name: 'Nenea Iancu',
-      variable: NeaIancu
-    }
+    // {
+    //   name: 'Nenea Iancu',
+    //   variable: NeaIancu
+    // }
   ];
