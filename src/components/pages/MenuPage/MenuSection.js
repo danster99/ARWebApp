@@ -80,34 +80,45 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div>
-      {DataOverall.map((subclass, subIndex) => {
-       return (
-        <>
-          <h1 id={"item"+subIndex} style={{color:'#1c2237', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.type}</h1>
-          {subclass.variable.map((item, index) => {
-          index=subIndex*100+index;
+    <div  className="background">
+      <div className="background-fade">
+        <div className="header">
+          <img src='images/logo-viar.jpg' className='logo'></img>
+        </div>
+        {/* <img className='background-img' src='background.jpeg'/> */}
+        
+        <div className="content">
+          {DataOverall.map((subclass, subIndex) => {
           return (
             <>
-          <Accordion square expanded={expanded === item.name} onChange={handleChange(item.name)}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'#fff'}} />}
-            aria-controls="panel1a-content"
-            id="panel1a-header">
-              <Typography style={{fontSize:'24px'}}>{item.name}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography style={{width:'100%', alignItems:'center'}}>
-                <p>{item.description}</p>
-                <p>Price: {item.price}</p>
-                <div style={{padding:'3% 30%'}} >
-                  <Button buttonStyle='btn--primary' onClick={function() { redirect(item.name.toString().toLowerCase().replace(/ /g,"_")); }}>View in 3D</Button>
-                </div> 
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-         </>)})}
-      </>
-       )})}
+              <h1 id={"item"+subIndex} className="font-face-fbi" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.name}</h1>
+                <div className="food-category font-face-fbk">
+                  {subclass.variable.map((item, index) => {
+                  index=subIndex*100+index;
+                  return (
+                    <>
+                  <Accordion square expanded={expanded === item.name} onChange={handleChange(item.name)}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header">
+                      <h2 className="font-face-fbk">{item.name}</h2>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography style={{width:'100%', alignItems:'center', fontFamily:"FuturaBook"}}>
+                        <p className="font-face-fbk">{item.description}</p>
+                        <p className="font-face-fbk">Pret: {item.price}</p>
+                        <div style={{padding:'0% 30%', margin:'auto'}} >
+                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={function() { redirect(item.model.toString()); }}>View in 3D</Button>
+                        </div> 
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </>)})}
+              </div>
+          </>
+          )})}
+        </div>
+      </div>
     </div>
   );
 }
