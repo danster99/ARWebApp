@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import { DataOverall } from './Data';
-import styled from 'styled-components';
-import { IconContext } from 'react-icons';
-import { FiPlus, FiMinus } from 'react-icons/fi';
+import { client } from './Data';
 import { Button } from '../../Button';
 import '../../../App.css';
 import  "./MenuSection.css"
-
-
-
 
 import { withStyles } from '@material-ui/core/styles';
 import MuiAccordion from '@material-ui/core/Accordion';
@@ -16,7 +11,6 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { ImportantDevices } from '@material-ui/icons';
 
 
 function redirect(item){
@@ -74,6 +68,26 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
+
+function handleClick (item, model){
+  fetch('https://test.viar-eu.com/api/request/new_request.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      client: client,
+      item: item,
+    })
+  })
+  
+  redirect(model);
+}
+
+
+
+
+
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -110,7 +124,7 @@ export default function CustomizedAccordions() {
                         <p className="font-face-fbk">{item.description}</p>
                         <p className="font-face-fbk">Pret: {item.price}</p>
                         <div style={{padding:'0% 30%', margin:'auto'}} >
-                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={function() { redirect(item.model.toString()); }}>View in 3D</Button>
+                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.model.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
                     </AccordionDetails>
