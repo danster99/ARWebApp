@@ -1,4 +1,4 @@
-
+export const client = 'TestSite';
 
 
 export const EarlyFoods = [
