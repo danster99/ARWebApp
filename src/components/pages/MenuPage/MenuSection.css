@@ -68,6 +68,10 @@ p{
   width: auto;
   margin: -10vh 50%;
   transform: translate(-50%, 25%);
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .background{

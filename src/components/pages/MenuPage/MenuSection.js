@@ -13,10 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
-function redirect(item){
+function redirect(item, model){
   if(item !== null)
   {
-      window.location.href = "/scanner.html?item="+item;
+      window.location.href = "/scanner.html?item="+model+"&outOf="+getTotalNr()+"&name="+item;
 
   }
 };
@@ -81,11 +81,21 @@ function handleClick (item, model){
     })
   })
   
-  redirect(model);
+  redirect(item, model);
 }
 
 
+function getTotalNr(){
+  var number = 0;
 
+  DataOverall.map((subclass) =>{
+    subclass.variable.map((item) =>{
+      number++;
+    });
+  });
+
+  return number;
+}
 
 
 export default function CustomizedAccordions() {
