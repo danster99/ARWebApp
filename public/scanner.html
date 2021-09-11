@@ -33,6 +33,22 @@
       <a-entity camera></a-entity>
     </a-scene>
     <script>
+
+      var modelID;
+      var model;
+      var modelName;
+
+      function setParams(id, mdl, name)
+      {
+        this.modelID = id;
+        this.model = mdl;
+        this.modelName = name;
+        console.log(modelName);
+      }
+
+
+        const response =  fetch('http://localhost/testApi/api/model/get_model.php?modelName=1').then(response => response.json()).then(data => setParams(data.ID, data.model, data.name));
+      
       const params = new URLSearchParams(document.location.search);
       var s = parseInt(params.get("item"));
       const name = params.get("name");
