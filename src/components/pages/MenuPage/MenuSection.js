@@ -70,16 +70,17 @@ const AccordionDetails = withStyles((theme) => ({
 
 
 function handleClick (item, model){
-  fetch('https://test.viar-eu.com/api/request/new_request.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      client: client,
-      item: item,
-    })
-  })
+  // fetch('http://localhost/api/request/new_request.php', {
+  //   method: 'POST',
+  //   mode: 'no-cors',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     client: client,
+  //     item: item,
+  //   })
+  // })
   
   redirect(item, model);
 }

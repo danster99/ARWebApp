@@ -38,7 +38,7 @@
       var model;
       var modelName;
 
-      function setParams(id, mdl, name)
+      async function setParams(id, mdl, name)
       {
         this.modelID = id;
         this.model = mdl;
@@ -47,12 +47,24 @@
       }
 
 
-        const response =  fetch('http://localhost/testApi/api/model/get_model.php?modelName=1').then(response => response.json()).then(data => setParams(data.ID, data.model, data.name));
       
       const params = new URLSearchParams(document.location.search);
       var s = parseInt(params.get("item"));
-      const name = params.get("name");
-      loadObj(s);
+      response =  fetch('http://localhost/api/model/get_model.php?modelName='+s.toString())
+      .then(response => response.json())
+      .then(data => setParams(data.ID, data.model, data.name)
+      .then(loadObj(s))
+      .then(
+      fetch('http://localhost/api/request/new_request.php', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          client: 'TestSite',
+          item: this.modelName
+        })
+      })));
+
 
       function loadObj(objModel)
       {
@@ -60,7 +72,7 @@
         const loader = new THREE.OBJLoader();
         loader.load("/models/"+objModel.toString()+"/"+objModel.toString()+".obj", function()
         {
-          //document.getElementById('itemName').innerHTML = name;
+          document.getElementById('itemName').innerHTML = this.modelName;
           document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%");
         })
       }
@@ -72,18 +84,45 @@
       const slider = document.getElementById('slider');
       const totalNr = parseInt(params.get("outOf"));
 
+
       function handleGesture() {
         if (touchendX - touchstartX < -70 && s+1<=totalNr){
           console.log("swiped left");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh");
           s++;
-          loadObj(s);
+          response =  fetch('http://localhost/api/model/get_model.php?modelName='+s.toString())
+          .then(response => response.json())
+          .then(data => setParams(data.ID, data.model, data.name)
+          .then(loadObj(s))
+          .then(
+          fetch('http://localhost/api/request/new_request.php', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              client: 'TestSite',
+              item: this.modelName
+            })
+          })));
         }
         if (touchendX - touchstartX > 70 && s-1>0){
           console.log("swiped right");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh");
           s--;
-          loadObj(s);
+          response =  fetch('http://localhost/api/model/get_model.php?modelName='+s.toString())
+          .then(response => response.json())
+          .then(data => setParams(data.ID, data.model, data.name)
+          .then(loadObj(s))
+          .then(
+          fetch('http://localhost/api/request/new_request.php', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              client: 'TestSite',
+              item: this.modelName
+            })
+      })));
         }
       }
 
