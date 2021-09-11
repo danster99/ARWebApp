@@ -135,7 +135,7 @@ export default function CustomizedAccordions() {
                         <p className="font-face-fbk">{item.description}</p>
                         <p className="font-face-fbk">Pret: {item.price}</p>
                         <div style={{padding:'0% 30%', margin:'auto'}} >
-                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.model.toString())}}>View in 3D</Button>
+                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
                     </AccordionDetails>

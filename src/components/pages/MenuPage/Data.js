@@ -5,19 +5,22 @@ export const EarlyFoods = [
   
   {
     name: 'Breakfast',
-    model:'1',    
+    model:'micDejun',
+    id:'1',   
     description: 'Oua, pita de casa, rosii',
     price: '19 lei',
   },
   {
     name: 'Brunch',
-    model:'2',    
+    model:'brunch',
+    id:'2',    
     description: 'Clatiat cu spanac, oua, avocado, branza feta, rosii.',
     price: '25 lei',
   },
   {
     name: 'Bruschetta',
-    model:'3',    
+    model:'bruschete',
+    id:'3',
     description: 'Clatiat cu spanac, oua, avocado, branza feta, rosii.',
     price: '25 lei',
   }
@@ -26,7 +29,8 @@ export const EarlyFoods = [
 export const Pizzas = [ 
   {
     name: 'Pizza Super Suprema',
-    model: '4',    
+    model:'pizzaSuprema',
+    id:'4',
     description: 'Blat pufos, crema de branza, sos de roșii, mozzarela, vita, cipuerci',
     price: '32 lei',
   }
@@ -35,13 +39,15 @@ export const Pizzas = [
 export const MainCourses = [ 
   {
     name: 'Steak & wedges',   
-    model: '7', 
+    model:'friptura',
+    id:'7',
     description: 'Vita Black Angus, rozmarin, cartofi.',
     price: '69 lei',
   },
   {
     name: 'Burger & wedges',
-    model:'8',    
+    model:'burger',
+    id:'8',
     description: 'Chifla de casa, carne de vita, cartofi, rosie, ceapa, salata.',
     price: '45 lei',
   }
@@ -52,13 +58,15 @@ export const Pastas = [
 
   {
     name: 'Pasta carbonara',
-    model:'5', 
+    model:'carbonara',
+    id:'5',
     description: 'Paste integrale, guanciale, ou, parmezan.',
     price: '32 lei',
   },
   {
     name: 'Pasta arrabiata',
-    model:'6', 
+    model:'arrabiata',
+    id:'6',
     description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
     price: '28 lei',
   }

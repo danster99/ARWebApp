@@ -49,13 +49,13 @@
 
       
       const params = new URLSearchParams(document.location.search);
-      var s = parseInt(params.get("item"));
-      response =  fetch('http://localhost/api/model/get_model.php?modelName='+s.toString())
+      var id = parseInt(params.get("item"));
+      response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
       .then(response => response.json())
       .then(data => setParams(data.ID, data.model, data.name)
-      .then(loadObj(s))
+      .then(loadObj(this.model))
       .then(
-      fetch('http://localhost/api/request/new_request.php', {
+      fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
         method: 'POST',
         mode: 'no-cors',
         headers: {'Content-Type': 'application/json'},
@@ -86,16 +86,16 @@
 
 
       function handleGesture() {
-        if (touchendX - touchstartX < -70 && s+1<=totalNr){
+        if (touchendX - touchstartX < -70 && id+1<=totalNr){
           console.log("swiped left");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh");
-          s++;
-          response =  fetch('http://localhost/api/model/get_model.php?modelName='+s.toString())
+          id++;
+          response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
           .then(response => response.json())
           .then(data => setParams(data.ID, data.model, data.name)
-          .then(loadObj(s))
+          .then(loadObj(this.model))
           .then(
-          fetch('http://localhost/api/request/new_request.php', {
+          fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {'Content-Type': 'application/json'},
@@ -105,16 +105,16 @@
             })
           })));
         }
-        if (touchendX - touchstartX > 70 && s-1>0){
+        if (touchendX - touchstartX > 70 && id-1>0){
           console.log("swiped right");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh");
-          s--;
-          response =  fetch('http://localhost/api/model/get_model.php?modelName='+s.toString())
+          id--;
+          response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
           .then(response => response.json())
           .then(data => setParams(data.ID, data.model, data.name)
-          .then(loadObj(s))
+          .then(loadObj(this.model))
           .then(
-          fetch('http://localhost/api/request/new_request.php', {
+          fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {'Content-Type': 'application/json'},
@@ -122,7 +122,7 @@
               client: 'TestSite',
               item: this.modelName
             })
-      })));
+          })));
         }
       }
 
