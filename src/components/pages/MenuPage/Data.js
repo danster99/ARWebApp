@@ -50,6 +50,13 @@ export const MainCourses = [
     id:'8',
     description: 'Chifla de casa, carne de vita, cartofi, rosie, ceapa, salata.',
     price: '45 lei',
+  },
+  {
+    name: 'Sandwich',
+    model:'sandwich',
+    id:'9',
+    description: 'test model.',
+    price: '45 lei',
   }
   
 ];
@@ -63,13 +70,13 @@ export const Pastas = [
     description: 'Paste integrale, guanciale, ou, parmezan.',
     price: '32 lei',
   },
-  // {
-  //   name: 'Pasta arrabiata',
-  //   model:'arrabiata',
-  //   id:'6',
-  //   description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
-  //   price: '28 lei',
-  // }
+  {
+    name: 'Pasta arrabiata',
+    model:'arrabiata',
+    id:'6',
+    description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
+    price: '28 lei',
+  }
 ];
 
 export const NeaIancu = [
