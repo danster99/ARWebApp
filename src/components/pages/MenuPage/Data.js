@@ -57,6 +57,13 @@ export const MainCourses = [
     id:'9',
     description: 'test model.',
     price: '45 lei',
+  },
+  {
+    name: 'Burger Vivo',
+    model:'burger1Vivo',
+    id:'10',
+    description: 'test model.',
+    price: '45 lei',
   }
   
 ];
