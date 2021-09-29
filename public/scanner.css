@@ -3,6 +3,10 @@ video{
     top: 10% !important;
 }
 
+body{
+  height: 90vh !important;
+  overflow: hidden !important;
+}
 
 .header {
     position: relative;
@@ -126,18 +130,22 @@ h1 {
   font-size: 3.5vh;
   margin-top: auto;
   bottom: 0px;
+  padding-bottom: 10vh;
 }
 
 
 .content {
   position: absolute;
-  width: 100vw;
-  bottom: 8.8vh;
-  padding: 0 18px;
+  width: 94vw;
+  bottom: 7vh;
+  padding-left: 5vw;
+  padding-right: 1vw;
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #fff;
+  padding-bottom: 10vh;
+
 }
 
 .collapsible:after {
