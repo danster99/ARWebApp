@@ -94,10 +94,14 @@ h1 {
   height: 10vh;
 }
 
+.gif-ios{
+  padding-top: 10vh !important; 
+}
+
 .gif-text{
   position: relative;
   display: flex;
-  margin-top: 23vh;
+  margin-top: 25vh;
   justify-content: space-around;
   align-items: center;
   width: 90vw;
@@ -145,6 +149,16 @@ h1 {
   transition: max-height 0.2s ease-out;
   background-color: #fff;
   padding-bottom: 10vh;
+
+}
+
+.collapsible-ios {
+  padding-bottom: 17vh;
+}
+
+
+.content-ios{
+  padding-bottom: 17vh;
 
 }
 

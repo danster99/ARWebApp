@@ -6,7 +6,9 @@
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
   <script src="libs/inflate.min.js"></script>
 
+
   <div class="header">
+
     <div class="header-content">
       <!-- <img src="/images/logo-viar.jpg"/> -->
       <h1 class="futura-bold">ViAR</h1>
@@ -22,7 +24,7 @@
         <h2 style="display: block; color: black; font-family:'PT Sans'; font-weight: normal;">Loading your model...</h2>
       </div>
       <div id="swipeAnimation">
-        <img src="/images/swipe-helper.gif" class="gif"/>
+        <img src="/images/swipe-helper.gif" class="gif" id="gif"/>
         <div class="gif-text">
           <h3 style="display: block; color: black; font-family:'PT Sans'; font-weight: normal;">Swipe to navigate the menu.</h3>
         </div>
@@ -47,11 +49,11 @@
 
     <div class="banner" id="banner">
       
-      <div class="content">
+      <div class="content" id="content">
         <p style="font-family: 'PT Sans', sans-serif" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p style="font-family: 'PT Sans', sans-serif" id="price">price</p>
       </div>
-      <button type="button" class="collapsible" id="itemName">Open Collapsible</button>
+      <button type="button" class="collapsible" id="collapsible">Open Collapsible</button>
     </div>
     <script>
       var coll = document.getElementsByClassName("collapsible");
@@ -121,7 +123,7 @@
         const loader = new THREE.OBJLoader();
         loader.load("/models/"+objModel.toString()+"/"+objModel.toString()+".obj", function()
         {
-          document.getElementById('itemName').innerHTML = this.modelName;
+          document.getElementById('collapsible').innerHTML = this.modelName;
           document.getElementById('description').innerHTML = this.modelDescription;
           document.getElementById('price').innerHTML = "Pret: " + this.modelPrice;
           document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%;");
@@ -188,6 +190,28 @@
         touchendX = e.changedTouches[0].screenX
         handleGesture()
       })
+
+      function detectBrowser() { 
+        if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+            return 'Opera';
+        } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+            return 'Chrome';
+        } else if(navigator.userAgent.indexOf("Safari") != -1) {
+            document.getElementById("gif").classList.toggle("gif-ios");
+            document.getElementById("content").classList.toggle("content-ios");
+            document.getElementById("collapsible").classList.toggle("collapsible-ios");
+            return 'Safari';
+        } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+            return 'Firefox';
+        } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+            return 'IE';//crap
+        } else {
+            return 'Unknown';
+        }
+      } 
+      console.log(detectBrowser());
+    
+    
     </script>
   </body>
 </html>
