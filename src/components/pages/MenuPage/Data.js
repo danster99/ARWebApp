@@ -86,6 +86,18 @@ export const Pastas = [
   }
 ];
 
+export const Deserts = [
+
+  {
+    name: 'Cheese cake',
+    model:'prajitura', 
+    id:'11',
+    description: 'Cheese cacke cu gem de capsuni si pudra de cacao.',
+    price: '25 lei',
+  }
+]
+
+
 export const NeaIancu = [
 
   {
@@ -115,6 +127,10 @@ export const NeaIancu = [
       name: 'Main Courses',
       variable: MainCourses
     },
+    {
+      name: 'Deserts',
+      variable: Deserts
+    }
     // {
     //   name: 'Nenea Iancu',
     //   variable: NeaIancu
