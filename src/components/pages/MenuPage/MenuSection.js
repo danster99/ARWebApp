@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { DataOverall } from './Data';
-import { client } from './Data';
 import { Button } from '../../Button';
 import '../../../App.css';
 import  "./MenuSection.css"

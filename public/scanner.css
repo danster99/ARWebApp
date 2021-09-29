@@ -4,7 +4,6 @@ video{
 }
 
 
-
 .header {
     position: relative;
     bottom: 0;
@@ -79,4 +78,75 @@ h1 {
   width: 90vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.gif{
+  position: relative;
+  top: 27vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 17vh;
+  display: block;
+  height: 10vh;
+}
+
+.gif-text{
+  position: relative;
+  display: flex;
+  margin-top: 23vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.banner{
+  visibility: hidden;
+  position:fixed;
+  left: 50%;
+  top: 75vh;
+  height: 25vh;
+  width: 100vw;
+  transform: translate(-50%);
+}
+
+
+.collapsible {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  padding: 2.5vh;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 3.5vh;
+  margin-top: auto;
+  bottom: 0px;
+}
+
+
+.content {
+  position: absolute;
+  width: 100vw;
+  bottom: 8.8vh;
+  padding: 0 18px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fff;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
 }
