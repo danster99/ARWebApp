@@ -13,10 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
-function redirect(item){
+function redirect(item, model){
   if(item !== null)
   {
-      window.location.href = "/scanner.html?item="+item;
+      window.location.href = "/scanner.html?item="+model+"&outOf="+getTotalNr()+"&name="+item;
 
   }
 };
@@ -70,22 +70,33 @@ const AccordionDetails = withStyles((theme) => ({
 
 
 function handleClick (item, model){
-  fetch('https://viar-eu.com/api/request/new_request.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      client: client,
-      item: item,
-    })
-  })
+  // fetch('http://localhost/api/request/new_request.php', {
+  //   method: 'POST',
+  //   mode: 'no-cors',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     client: client,
+  //     item: item,
+  //   })
+  // })
   
-  redirect(model);
+  redirect(item, model);
 }
 
 
+function getTotalNr(){
+  var number = 0;
 
+  DataOverall.map((subclass) =>{
+    subclass.variable.map((item) =>{
+      number++;
+    });
+  });
+
+  return number;
+}
 
 
 export default function CustomizedAccordions() {
@@ -124,7 +135,7 @@ export default function CustomizedAccordions() {
                         <p className="font-face-fbk">{item.description}</p>
                         <p className="font-face-fbk">Pret: {item.price}</p>
                         <div style={{padding:'0% 30%', margin:'auto'}} >
-                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.model.toString())}}>View in 3D</Button>
+                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
                     </AccordionDetails>

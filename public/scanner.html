@@ -9,11 +9,11 @@
   <div class="header">
     <div class="header-content">
       <!-- <img src="/images/logo-viar.jpg"/> -->
-      <h1>ViAR</h1>
+      <h1 id="itemName">ViAR</h1>
       <button class="back-button"><a href="/">BACK</a></button>
     </div>
   </div>
-  <body name="body" style="margin : auto; overflow: hidden; display: block;">
+  <body name="body" style="margin : auto; overflow: hidden; display: block;" id="slider">
     <div id="preloader" style="height: 90vh; width: auto; background-color: #fff; visibility: visible; top: 0vh; left: 0vw; ">
       <img src="/images/logo-viar.jpg" class="rotate" width="100" height="100" loading="lazy" />
       <div class="loading-text">
@@ -33,14 +33,106 @@
       <a-entity camera></a-entity>
     </a-scene>
     <script>
-      const params = new URLSearchParams(document.location.search);
-      const s = params.get("item");
-      var script = document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+s.toString()+"/"+s.toString()+".obj); mtl: url(/models/"+s.toString()+"/"+s.toString()+".mtl)");
-      const loader = new THREE.OBJLoader();
-      loader.load("/models/"+s.toString()+"/"+s.toString()+".obj", function()
+
+      var modelID;
+      var model;
+      var modelName;
+
+      async function setParams(id, mdl, name)
       {
-        console.log("dasdasd");
-        document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%");
+        this.modelID = id;
+        this.model = mdl;
+        this.modelName = name;
+        console.log(modelName);
+      }
+
+
+      
+      const params = new URLSearchParams(document.location.search);
+      var id = parseInt(params.get("item"));
+      response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
+      .then(response => response.json())
+      .then(data => setParams(data.ID, data.model, data.name)
+      .then(loadObj(this.model))
+      .then(
+      fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          client: 'TestSite',
+          item: this.modelName
+        })
+      })));
+
+
+      function loadObj(objModel)
+      {
+        var script = document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+objModel.toString()+"/"+objModel.toString()+".obj); mtl: url(/models/"+objModel.toString()+"/"+objModel.toString()+".mtl)");
+        const loader = new THREE.OBJLoader();
+        loader.load("/models/"+objModel.toString()+"/"+objModel.toString()+".obj", function()
+        {
+          document.getElementById('itemName').innerHTML = this.modelName;
+          document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%");
+        })
+      }
+
+
+      let touchstartX = 0
+      let touchendX = 0
+
+      const slider = document.getElementById('slider');
+      const totalNr = parseInt(params.get("outOf"));
+
+
+      function handleGesture() {
+        if (touchendX - touchstartX < -70 && id+1<=totalNr){
+          console.log("swiped left");
+          document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh");
+          id++;
+          response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
+          .then(response => response.json())
+          .then(data => setParams(data.ID, data.model, data.name)
+          .then(loadObj(this.model))
+          .then(
+          fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              client: 'TestSite',
+              item: this.modelName
+            })
+          })));
+        }
+        if (touchendX - touchstartX > 70 && id-1>0){
+          console.log("swiped right");
+          document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh");
+          id--;
+          response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
+          .then(response => response.json())
+          .then(data => setParams(data.ID, data.model, data.name)
+          .then(loadObj(this.model))
+          .then(
+          fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              client: 'TestSite',
+              item: this.modelName
+            })
+          })));
+        }
+      }
+
+      slider.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX
+      })
+
+      slider.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX
+        handleGesture()
       })
     </script>
   </body>
