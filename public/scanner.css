@@ -3,7 +3,10 @@ video{
     top: 10% !important;
 }
 
-
+body{
+  height: 90vh !important;
+  overflow: hidden !important;
+}
 
 .header {
     position: relative;
@@ -40,8 +43,9 @@ video{
     visibility: hidden;
 }
 
-a:visited{
-  color:white;
+a, a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1 {
@@ -79,4 +83,93 @@ h1 {
   width: 90vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.gif{
+  position: relative;
+  top: 27vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 17vh;
+  display: block;
+  height: 10vh;
+}
+
+.gif-ios{
+  padding-top: 10vh !important; 
+}
+
+.gif-text{
+  position: relative;
+  display: flex;
+  margin-top: 25vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.banner{
+  visibility: hidden;
+  position:fixed;
+  left: 50%;
+  top: 75vh;
+  height: 25vh;
+  width: 100vw;
+  transform: translate(-50%);
+}
+
+
+.collapsible {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  padding: 2.5vh;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 3.5vh;
+  margin-top: auto;
+  bottom: 0px;
+  padding-bottom: 10vh;
+}
+
+
+.content {
+  position: absolute;
+  width: 94vw;
+  bottom: 7vh;
+  padding-left: 5vw;
+  padding-right: 1vw;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fff;
+  padding-bottom: 10vh;
+
+}
+
+.collapsible-ios {
+  padding-bottom: 17vh;
+}
+
+
+.content-ios{
+  padding-bottom: 17vh;
+
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
 }

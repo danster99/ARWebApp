@@ -14,14 +14,14 @@ export const EarlyFoods = [
     name: 'Brunch',
     model:'brunch',
     id:'2',    
-    description: 'Clatiat cu spanac, oua, avocado, branza feta, rosii.',
+    description: 'Clatita cu spanac, oua, avocado, branza feta, rosii.',
     price: '25 lei',
   },
   {
     name: 'Bruschetta',
     model:'bruschete',
     id:'3',
-    description: 'Clatiat cu spanac, oua, avocado, branza feta, rosii.',
+    description: 'Bruschete cu rosii, usturoi, busuioc si ulei de masline extra virgin.',
     price: '25 lei',
   }
 ];
@@ -56,7 +56,7 @@ export const MainCourses = [
     model:'sandwich',
     id:'9',
     description: 'test model.',
-    price: '45 lei',
+    price: '20 lei',
   },
   {
     name: 'Burger Vivo',
@@ -103,6 +103,17 @@ export const Tests = [
     price: '28 lei',
   }
 ];
+export const Deserts = [
+
+  {
+    name: 'Cheese cake',
+    model:'prajitura', 
+    id:'11',
+    description: 'Cheese cacke cu gem de capsuni si pudra de cacao.',
+    price: '25 lei',
+  }
+]
+
 
 export const NeaIancu = [
 
@@ -137,6 +148,10 @@ export const NeaIancu = [
       name: 'Tests',
       variable: Tests
     },
+    {
+      name: 'Deserts',
+      variable: Deserts
+    }
     // {
     //   name: 'Nenea Iancu',
     //   variable: NeaIancu
