@@ -145,12 +145,12 @@ export const NeaIancu = [
       variable: MainCourses
     },
     {
-      name: 'Tests',
-      variable: Tests
-    },
-    {
       name: 'Deserts',
       variable: Deserts
+    },
+    {
+      name: 'Tests',
+      variable: Tests
     }
     // {
     //   name: 'Nenea Iancu',
