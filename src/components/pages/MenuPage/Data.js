@@ -86,6 +86,24 @@ export const Pastas = [
   }
 ];
 
+export const Tests = [
+
+  {
+    name: 'Burger Test',
+    model:'burgertest',
+    id:'5',
+    description: 'Paste integrale, guanciale, ou, parmezan.',
+    price: '32 lei',
+  },
+  {
+    name: 'Pasta arrabiata',
+    model:'arrabiata',
+    id:'6',
+    description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
+    price: '28 lei',
+  }
+];
+
 export const NeaIancu = [
 
   {
@@ -114,6 +132,10 @@ export const NeaIancu = [
     {
       name: 'Main Courses',
       variable: MainCourses
+    },
+    {
+      name: 'Tests',
+      variable: Tests
     },
     // {
     //   name: 'Nenea Iancu',
