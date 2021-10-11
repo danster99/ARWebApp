@@ -1,3 +1,41 @@
+@font-face {
+  font-family: "HalvarStnclMittel-BdMidG";
+  src: local("HalvarStnclMittel-BdMidG"),
+  url("/fonts/Halvar/HalvarStnclMittel-BdMidG.ttf");
+}
+
+@font-face {
+  font-family: "HalvarStnclMittel-BdMinG";
+  src: local("HalvarStnclMittel-BdMinG"),
+  url("/fonts/Halvar/HalvarStnclMittel-BdMinG.ttf");
+}
+
+
+.font-face-halvar{
+  font-family:"HalvarStnclMittel-BdMidG";
+  font-size: 40px;;
+}
+
+.font-face-halvar-ming{
+  font-family:"HalvarStnclMittel-BdMinG";
+  font-size: 30px;
+}
+
+@font-face {
+  font-family: "HalvarStnclMittel-LtMinG";
+  src: local("HalvarStnclMittel-LtMinG"),
+  url("/fonts/Halvar/HalvarStnclMittel-LtMinG.ttf");
+}
+
+
+.font-face-halvar-regular{
+  font-family:"HalvarStnclMittel-LtMinG";
+  font-size: 40px;;
+}
+
+
+
+
 video{  
     height: 90%  !important;
     top: 10% !important;
@@ -12,12 +50,12 @@ body{
     position: relative;
     bottom: 0;
     left: 0;
-    height: 10%;
+    height: 12%;
     width: auto;
     display: flex;
     justify-content:space-around;
     align-items:center;
-    background-color: white;
+    background-color: #ff9466;
     z-index: 1;
 }
 
@@ -124,7 +162,7 @@ h1 {
 
 .collapsible {
   position: absolute;
-  background-color: #fff;
+  background-color: #ff9466;
   color: black;
   cursor: pointer;
   padding: 2.5vh;
@@ -148,7 +186,7 @@ h1 {
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #fff;
+  background-color: #ff9466;
   padding-bottom: 10vh;
 
 }

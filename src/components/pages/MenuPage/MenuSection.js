@@ -24,7 +24,7 @@ function redirect(item, model){
 const Accordion = withStyles({
   root: {
     // backgroundColor: '#fffff6',
-    backgroundColor: 'white',
+    backgroundColor: '#ff9466',
     color:'#00000',
     boxShadow: 'none',
     '&:not(:last-child)': {
@@ -97,7 +97,7 @@ export default function CustomizedAccordions() {
     <div  className="background">
       <div className="background-fade">
         <div className="header">
-          <img src='images/logo-viar.jpg' className='logo'></img>
+          <img src='images/logo-title.png' className='logo'></img>
         </div>
         {/* <img className='background-img' src='background.jpeg'/> */}
         
@@ -105,7 +105,7 @@ export default function CustomizedAccordions() {
           {DataOverall.map((subclass, subIndex) => {
           return (
             <>
-              <h1 id={"item"+subIndex} className="font-face-fbi" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.name}</h1>
+              <h1 id={"item"+subIndex} className="font-face-halvar" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.name}</h1>
                 <div className="food-category font-face-fbk">
                   {subclass.variable.map((item, index) => {
                   index=subIndex*100+index;
@@ -115,14 +115,14 @@ export default function CustomizedAccordions() {
                     <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header">
-                      <h2 className="font-face-fbk">{item.name}</h2>
+                      <h2 className="font-face-halvar-regular">{item.name}</h2>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography style={{width:'100%', alignItems:'center', fontFamily:"FuturaBook"}}>
-                        <p className="font-face-fbk">{item.description}</p>
-                        <p className="font-face-fbk">Pret: {item.price}</p>
+                        <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>{item.description}</p>
+                        <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>Pret: {item.price}</p>
                         <div style={{padding:'0% 30%', margin:'auto'}} >
-                          <Button buttonStyle='btn--primary' className="font-face-fbk" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
+                          <Button buttonStyle='btn--primary' className="font-face-halvar-ming" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
                     </AccordionDetails>

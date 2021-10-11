@@ -11,6 +11,30 @@
   url("/src/fonts/Futura/FuturaBookfont.ttf");
 }
 
+@font-face {
+  font-family: "HalvarStnclMittel-BdMidG";
+  src: local("HalvarStnclMittel-BdMidG"),
+  url("/src/fonts/Halvar/HalvarStnclMittel-BdMidG.ttf");
+}
+
+@font-face {
+  font-family: "HalvarStnclMittel-BdMinG";
+  src: local("HalvarStnclMittel-BdMinG"),
+  url("/src/fonts/Halvar/HalvarStnclMittel-BdMinG.ttf");
+}
+
+@font-face {
+  font-family: "HalvarStnclMittel-LtMinG";
+  src: local("HalvarStnclMittel-LtMinG"),
+  url("/src/fonts/Halvar/HalvarStnclMittel-LtMinG.ttf");
+}
+
+
+.font-face-halvar-regular{
+  font-family:"HalvarStnclMittel-LtMinG";
+  font-size: 25px;;
+}
+
 .font-face-fbi{
   font-family:"FuturaBoldItalic";
 }
@@ -19,6 +43,15 @@
   font-family:"FuturaBook" !important;
 }
 
+.font-face-halvar{
+  font-family:"HalvarStnclMittel-BdMidG";
+  font-size:xxx-large;
+}
+
+.font-face-halvar-ming{
+  font-family:"HalvarStnclMittel-BdMinG";
+  font-size: xx-large;
+}
 
 .background-img {
     opacity: 0.6;
@@ -64,9 +97,9 @@ p{
 }
 
 .logo{
-  height: 18vh;
+  height: 10vh;
   width: auto;
-  margin: -10vh 50%;
+  margin: -2.5vh 50%;
   transform: translate(-50%, 25%);
   border: 0;
   max-width: 100%;
@@ -84,7 +117,7 @@ p{
     overflow: scroll;
     width: 100vw;
     height: 100%;
-    background-image: url(../../background/background.jpeg);
+    background-image: url(../../background/background-vivo.jpg);
     background-position: 50% 0px;
     background-size: cover;
     background-repeat: no-repeat;
