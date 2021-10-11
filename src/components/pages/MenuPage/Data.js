@@ -1,5 +1,26 @@
 export const client = "Demo";
 
+export async function getCategories(){
+    var categories = [];
+    var response = await fetch('https://test.viar-eu.com/api/api/category/get_all.php')
+      .then(response => response.json());
+    
+    //console.log(response.data);
+
+    response.data.forEach(function(element) {
+      let category ={
+        'name': element.categoryName,
+        'startID':element.startID,
+        'count': element.count
+      }
+      categories.push(category);
+    });
+    console.log(categories);
+    return categories;
+  }
+
+
+
 
 export const EarlyFoods = [
   
@@ -101,7 +122,19 @@ export const Tests = [
     id:'13',
     description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
     price: '28 lei',
-  }
+  },{
+    name: 'Burger Test 1',
+    model:'burgertest1',
+    id:'14',
+    description: 'Paste integrale, guanciale, ou, parmezan.',
+    price: '32 lei',
+  },{
+    name: 'Burger Test 2',
+    model:'burgertest2',
+    id:'15',
+    description: 'Paste integrale, guanciale, ou, parmezan.',
+    price: '32 lei',
+  },
 ];
 export const Deserts = [
 
