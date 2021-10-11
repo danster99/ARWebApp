@@ -104,8 +104,29 @@ export const Tests = [
 
   {
     name: 'Burger Test',
+    model:'burger1Vivo',
+    id:'11',
+    description: 'test model.',
+    price: '45 lei',
+  },
+  {
+    name: 'Burger Test 1',
     model:'burgertest',
     id:'12',
+    description: 'Paste integrale, guanciale, ou, parmezan.',
+    price: '32 lei',
+  },
+  {
+    name: 'Burger Test 2',
+    model:'burgertest1',
+    id:'13',
+    description: 'Paste integrale, guanciale, ou, parmezan.',
+    price: '32 lei',
+  },
+  {
+    name: 'Burger Test 3',
+    model:'burgertest2',
+    id:'14',
     description: 'Paste integrale, guanciale, ou, parmezan.',
     price: '32 lei',
   },
@@ -115,25 +136,6 @@ export const Tests = [
     id:'15',
     description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
     price: '28 lei',
-  },{
-    name: 'Burger Test 1',
-    model:'burgertest1',
-    id:'13',
-    description: 'Paste integrale, guanciale, ou, parmezan.',
-    price: '32 lei',
-  },{
-    name: 'Burger Test 2',
-    model:'burgertest2',
-    id:'14',
-    description: 'Paste integrale, guanciale, ou, parmezan.',
-    price: '32 lei',
-  },
-  {
-    name: 'Burger Test 3',
-    model:'burger1Vivo',
-    id:'11',
-    description: 'test model.',
-    price: '45 lei',
   }
 ];
 export const Deserts = [
