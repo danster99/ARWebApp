@@ -78,13 +78,6 @@ export const MainCourses = [
     id:'9',
     description: 'test model.',
     price: '20 lei',
-  },
-  {
-    name: 'Burger Vivo',
-    model:'burger1Vivo',
-    id:'10',
-    description: 'test model.',
-    price: '45 lei',
   }
   
 ];
@@ -117,18 +110,13 @@ export const Tests = [
     price: '32 lei',
   },
   {
-    name: 'Salata bacon',
-    model:'salatabacon',
-    id:'13',
-    description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
-    price: '28 lei',
-  },{
     name: 'Burger Test 1',
     model:'burgertest1',
-    id:'14',
+    id:'13',
     description: 'Paste integrale, guanciale, ou, parmezan.',
     price: '32 lei',
-  },{
+  },
+  {
     name: 'Burger Test 2',
     model:'burgertest2',
     id:'14',
@@ -141,6 +129,13 @@ export const Tests = [
     id:'11',
     description: 'test model.',
     price: '45 lei',
+  },
+  {
+    name: 'Salata bacon',
+    model:'salatabacon',
+    id:'15',
+    description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
+    price: '28 lei',
   }
 ];
 export const Deserts = [
