@@ -78,6 +78,13 @@ export const MainCourses = [
     id:'9',
     description: 'test model.',
     price: '20 lei',
+  },
+  {
+    name: 'Burger Vivo',
+    model:'burger1Vivo',
+    id:'10',
+    description: 'test model.',
+    price: '45 lei',
   }
   
 ];
@@ -112,13 +119,13 @@ export const Tests = [
   {
     name: 'Salata bacon',
     model:'salatabacon',
-    id:'15',
+    id:'13',
     description: 'Paste integrale, sos de rosii, busuioc, parmezan, pui.',
     price: '28 lei',
   },{
     name: 'Burger Test 1',
     model:'burgertest1',
-    id:'13',
+    id:'14',
     description: 'Paste integrale, guanciale, ou, parmezan.',
     price: '32 lei',
   },{

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MenuSection from './components/pages/MenuPage/MenuSection';
+import CustomizedAccordions from './components/pages/MenuPage/MenuSection';
 
 
 function App() {
@@ -9,10 +9,10 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/home'>
-          <MenuSection/>
+          <CustomizedAccordions/>
         </Route>
         <Route exact path='/' >
-          <MenuSection/>
+          <CustomizedAccordions/>
         </Route>
       </Switch>
     </Router>
