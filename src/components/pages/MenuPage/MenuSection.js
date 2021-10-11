@@ -69,18 +69,6 @@ const AccordionDetails = withStyles((theme) => ({
 
 
 function handleClick (item, model){
-  // fetch('http://localhost/api/request/new_request.php', {
-  //   method: 'POST',
-  //   mode: 'no-cors',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify({
-  //     client: client,
-  //     item: item,
-  //   })
-  // })
-  
   redirect(item, model);
 }
 
