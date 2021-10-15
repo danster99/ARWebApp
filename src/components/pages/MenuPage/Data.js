@@ -96,23 +96,33 @@ export async function getCategories(){
   export const Soups = [
   
     {
-      name: 'Breakfast',
-      model:'micDejun',
-      id:'1',   
-      description: 'Oua, pita de casa, rosii',
-      price: '19 lei',
+      name: 'The Big Soup Theory',
+      id:'12',   
+      description: 'Rosii, masline, parmezan, crutoane cu branza. (Alergeni: gluten,oua,lapte,susan,telina)',
+      price: '15.00 lei',
     }
   ];
 
   export const Salads = [
   
     {
-      name: 'Breakfast',
-      model:'micDejun',
-      id:'1',   
-      description: 'Oua, pita de casa, rosii',
-      price: '19 lei',
-    }
+      name: 'The Fancy Salad',
+      id: '13',
+      description: 'Baby spinach, crisp de prosciutto crudo, nuci caramelizate, gorgonzola, pere baby in compot, dressing de otet balsamic. (Alergeni: lapte,fructe cu coaja lemnoasa, mustra)',
+      price: '33.00 lei',
+    },
+    {
+      name: 'The Bacon Salad',
+      id: '14',
+      description: 'Nu este in meniu deocamdata.',
+      price: '99.00 lei',
+    },
+    {
+      name: 'The Geek Salad',
+      id: '15',
+      description: 'Salata mixta, rosii, castraveti, ceapa rosie,tzatziki, telemea, dressing de lamaie. (Alergeni: lapte,mustar)',
+      price: '28.00 lei',
+    },
   ];
 
   export const Sides = [
@@ -120,7 +130,6 @@ export async function getCategories(){
     {
       name: 'Breakfast',
       model:'micDejun',
-      id:'1',   
       description: 'Oua, pita de casa, rosii',
       price: '19 lei',
     }
@@ -144,14 +153,14 @@ export async function getCategories(){
       name: 'HOUSE of RIBS',
       variable: Ribs
     },
-    // {
-    //   name: 'SOUPS',
-    //   variable: Soups
-    // },
-    // {
-    //   name: 'SALADSS',
-    //   variable: Salads
-    // },
+    {
+      name: 'SOUPS',
+      variable: Soups
+    },
+    {
+      name: 'SALADSS',
+      variable: Salads
+    },
     // {
     //   name: 'SIDES',
     //   variable: Sides
