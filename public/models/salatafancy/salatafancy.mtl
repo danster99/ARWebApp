@@ -1,18 +1,10 @@
-newmtl Salata_Fancy
+newmtl Salata_Fancy1
 Ka 1.000000 1.000000 1.000000
 Ks 0.000000 0.000000 0.000000
 d 1
 Ns 0.00000
 illum 1
 map_Kd salatafancy.jpg
-
-newmtl Salata_Fancy.001
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-d 1
-Ns 0.00000
-illum 1
-map_Kd castron.jpg
 
 newmtl NO_MATERIAL
 Ka 1.000000 0.000000 0.000000
