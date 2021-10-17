@@ -123,6 +123,12 @@ export async function getCategories(){
       description: 'Salata mixta, rosii, castraveti, ceapa rosie,tzatziki, telemea, dressing de lamaie. (Alergeni: lapte,mustar)',
       price: '28.00 lei',
     },
+    {
+      name: 'The Mix Salad',
+      id: '16',
+      description: 'descriere lipsa',
+      price: '00.00 lei',
+    },
   ];
 
   export const Sides = [
