@@ -106,16 +106,16 @@ export async function getCategories(){
   export const Salads = [
   
     {
-      name: 'The Fancy Salad',
+      name: 'The Italian Salad',
       id: '13',
-      description: 'Baby spinach, crisp de prosciutto crudo, nuci caramelizate, gorgonzola, pere baby in compot, dressing de otet balsamic. (Alergeni: lapte,fructe cu coaja lemnoasa, mustra)',
-      price: '33.00 lei',
+      description: 'Salata verde, piept de pui, crutoanele casei sos ceaser (parmezan,ansoa). (Alergeni: gluten,oua,lapte,susan,mustar,peste)',
+      price: '31.00 lei',
     },
     {
-      name: 'The Bacon Salad',
+      name: 'The Fancy Salad',
       id: '14',
-      description: 'Nu este in meniu deocamdata.',
-      price: '99.00 lei',
+      description: 'Baby spinach, crisp de prosciutto crudo, nuci caramelizate, gorgonzola, pere baby in compot, dressing de otet balsamic. (Alergeni: lapte,fructe cu coaja lemnoasa, mustra)',
+      price: '33.00 lei',
     },
     {
       name: 'The Geek Salad',
@@ -143,11 +143,16 @@ export async function getCategories(){
   export const Deserts = [
   
     {
-      name: 'Breakfast',
-      model:'micDejun',
-      id:'1',   
-      description: 'Oua, pita de casa, rosii',
-      price: '19 lei',
+      name: 'Mama\'s Cake',
+      id:'17',   
+      description: 'Cheesecake (Alergeni: gluten,oua,lapte)',
+      price: '16.00 lei',
+    },
+    {
+      name: 'Choklit',
+      id:'18',   
+      description: 'Mousse de ciocolată, mousse de caramel, biscuite de cacao, sos de ciocolată belgiană, granita de castravete cu mentă şi gin londonez.',
+      price: '16.00 lei',
     }
   ];
   export const DataOverall =[
@@ -164,15 +169,15 @@ export async function getCategories(){
       variable: Soups
     },
     {
-      name: 'SALADSS',
+      name: 'SALADS',
       variable: Salads
     },
     // {
     //   name: 'SIDES',
     //   variable: Sides
     // },
-    // {
-    //   name: 'SWEETS',
-    //   variable: Deserts
-    // }
+    {
+      name: 'SWEETS',
+      variable: Deserts
+    }
   ];
