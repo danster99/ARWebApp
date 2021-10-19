@@ -3,10 +3,13 @@
   <link rel="stylesheet" href="scanner.css">
   <link rel="icon" href="/images/logo-portocaliu-full.png" />
   <link rel="apple-touch-icon" href="/images/logo-portocaliu-full.png" />
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
-  <script src="libs/inflate.min.js"></script>
+  <script src="libs/inflate.min.js"></script> -->
+  <!-- import aframe and then ar.js with image tracking / location based features -->
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 
   <div class="header">
@@ -35,15 +38,26 @@
 
 
     <a-scene embedded arjs light="defaultLightsEnabled: false">
-      <a-marker preset='custom' type='pattern' url='pattern-pp.patt'>
+      <a-nft
+      type="nft"
+      url="/logo-tracker/logo-tracker"
+      emitevents="true"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+      size=0.5
+    >
+      <!-- <a-marker preset='custom' type='pattern' url='pattern-pp.patt'> -->
           <a-entity
           id="model"
           position="0 0 0"
-          scale="20 20 20"
+          scale="80 80 80"
           material="shader: flat"
           animation="property: rotation; dur: 15000; to: 0 360 0; easing: linear; loop: true"></a-entity>
           <a-entity light="type: ambient; color: #FFF; intensity: 1"></a-entity>
-      </a-marker>
+      <!-- </a-marker> -->
+      </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
 
