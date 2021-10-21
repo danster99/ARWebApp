@@ -23,8 +23,7 @@ function redirect(item, model){
 
 const Accordion = withStyles({
   root: {
-    // backgroundColor: '#fffff6',
-    backgroundColor: '#ff9466',
+    backgroundColor: '#f04e23',
     color:'#00000',
     boxShadow: 'none',
     '&:last-child':{
@@ -32,7 +31,8 @@ const Accordion = withStyles({
       borderBottomRightRadius: '20px',
     },
     '&:not(:last-child)': {
-      borderBottom:'1px solid rgba(0, 0, 0, 0.5)',
+      borderBottom:'2px solid rgba(0, 0, 0, 0.3)',
+      paddingBottom:'2px'
     },
     '&:before': {
       display: 'none',
@@ -41,13 +41,13 @@ const Accordion = withStyles({
       margin: 'auto',
     },
   },
-  expanded: {},
+  expanded: {borderBottom: '1px solid rgba(0, 0, 0, 0) !important'},
 })(MuiAccordion);
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: 'rgba(0, 0, 0, 0)',
-    marginBottom: -1,
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    paddingBottom:'0px',
     minHeight: 56,
     '&$expanded': {
       minHeight: 56,
@@ -63,11 +63,17 @@ const AccordionSummary = withStyles({
 
 const AccordionDetails = withStyles((theme) => ({
   root: {
+    backgroundColor:'#f0ece4',
+    borderBottom:'2px solid rgba(0, 0, 0, 0.6)',
+    marginBottom: '-3px',
     padding: theme.spacing(2),
     // paddingBottom: '0% !important',
     alignItems:'center',
-    color:'#fff',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    '&:last-child':{
+      borderBottomLeftRadius: '20px',
+      borderBottomRightRadius: '20px',
+    }
   },
 }))(MuiAccordionDetails);
 
@@ -109,14 +115,14 @@ export default function CustomizedAccordions() {
           {DataOverall.map((subclass, subIndex) => {
           return (
             <>
-              <h1 id={"item"+subIndex} className="font-face-halvar" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.name}</h1>
+              <h1 id={"item"+subIndex} className="font-face-halvar" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center', fontSize:'7vh'}}>{subclass.name}</h1>
                 <div className="food-category font-face-fbk">
                   {subclass.variable.map((item, index) => {
                   index=subIndex*100+index;
                   return (
                     <>
-                  <Accordion square id={index%100} expanded={expanded === item.name} onChange={handleChange(item.name)} style={{borderTopLeftRadius: index%100 == 0? '20px' : console.log(index%100),
-                                                                                                                                borderTopRightRadius: index%100 == 0? '20px' : console.log(index%100)}}>
+                  <Accordion square id={index%100} expanded={expanded === item.name} onChange={handleChange(item.name)} style={{borderTopLeftRadius: index%100 == 0? '20px' : null,
+                                                                                                                                borderTopRightRadius: index%100 == 0? '20px' : null}}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header">

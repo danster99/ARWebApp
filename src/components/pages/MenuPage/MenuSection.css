@@ -76,7 +76,7 @@
 .food-category{
   margin-left: 4vw;
   margin-right: 4vw;
-  box-shadow: -10px 10px 15px  rgba(0, 0, 0, .7);
+  box-shadow: -3px 10px 14px  rgba(0, 0, 0, 0.7);
   background-color: rgba(0, 0, 0, 0);
   border-radius: 20px;
 }
@@ -127,7 +127,7 @@ p{
 }
 
 .background-fade{
-  background-color:rgba(255, 255, 255, 0.45);
+  background-color:rgba(228, 227, 210, 0.45);
   position: fixed;
     left: 0px;
     top: 0px;
