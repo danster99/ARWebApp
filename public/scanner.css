@@ -55,7 +55,7 @@ body{
     display: flex;
     justify-content:space-around;
     align-items:center;
-    background-color: #ff9466;
+    background-color: #f04e23;
     z-index: 1;
 }
 
@@ -64,7 +64,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
+  width: 90vw;
 }
 
 .back-button {
@@ -73,8 +73,8 @@ body{
     border: none;
     background: black;
     color: white;
-    width: 4em;
-    height: 2em;
+    width: 18vw;
+    height: 4.5vh;
 }
 
 .a-enter-vr-button{
@@ -162,7 +162,7 @@ h1 {
 
 .collapsible {
   position: absolute;
-  background-color: #ff9466;
+  background-color: #f04e23;
   color: black;
   cursor: pointer;
   padding: 2.5vh;
@@ -179,6 +179,7 @@ h1 {
 
 .content {
   position: absolute;
+  border-radius: 20px;
   width: 94vw;
   bottom: 7vh;
   padding-left: 5vw;
@@ -186,7 +187,7 @@ h1 {
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #ff9466;
+  background-color: #f9f8f3;
   padding-bottom: 10vh;
 
 }
