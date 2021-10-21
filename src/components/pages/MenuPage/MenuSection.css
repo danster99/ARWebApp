@@ -76,7 +76,9 @@
 .food-category{
   margin-left: 4vw;
   margin-right: 4vw;
-  box-shadow: -10px 10px 5px  rgba(0, 0, 0, .7);
+  box-shadow: -10px 10px 15px  rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
 }
 
 p{

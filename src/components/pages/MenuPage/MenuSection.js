@@ -27,6 +27,10 @@ const Accordion = withStyles({
     backgroundColor: '#ff9466',
     color:'#00000',
     boxShadow: 'none',
+    '&:last-child':{
+      borderBottomLeftRadius: '20px',
+      borderBottomRightRadius: '20px',
+    },
     '&:not(:last-child)': {
       borderBottom:'1px solid rgba(0, 0, 0, 0.5)',
     },
@@ -111,7 +115,8 @@ export default function CustomizedAccordions() {
                   index=subIndex*100+index;
                   return (
                     <>
-                  <Accordion square expanded={expanded === item.name} onChange={handleChange(item.name)}>
+                  <Accordion square id={index%100} expanded={expanded === item.name} onChange={handleChange(item.name)} style={{borderTopLeftRadius: index%100 == 0? '20px' : console.log(index%100),
+                                                                                                                                borderTopRightRadius: index%100 == 0? '20px' : console.log(index%100)}}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header">

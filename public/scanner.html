@@ -38,17 +38,7 @@
 
 
     <a-scene embedded arjs light="defaultLightsEnabled: false">
-      <a-nft
-      type="nft"
-      url="/logo-tracker/logo-tracker"
-      emitevents="true"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      size=0.5
-    >
-      <!-- <a-marker preset='custom' type='pattern' url='pattern-pp.patt'> -->
+      <a-marker preset='custom' type='pattern' url='pattern-pp.patt'>
           <a-entity
           id="model"
           position="0 0 0"
@@ -56,8 +46,7 @@
           material="shader: flat"
           animation="property: rotation; dur: 15000; to: 0 360 0; easing: linear; loop: true"></a-entity>
           <a-entity light="type: ambient; color: #FFF; intensity: 1"></a-entity>
-      <!-- </a-marker> -->
-      </a-nft>
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
 
