@@ -78,7 +78,7 @@ export async function getCategories(){
     {
         name: 'Haloumi Burger',
         id:'10',   
-        description: 'Paine brioche, ketchup, salata verde, branza Halloumi, vanata, pesto de rucola. (Alergeni: gluten,oua,lapte,susan,peste,mustar) 300gr',
+        description: 'Paine brioche, ketchup, salata verde, branza Halloumi, vanata, pesto de rucola. (Alergeni: gluten, oua, lapte, susan, peste, mustar) 300gr',
         price: '28.00 lei',
     }
   ];
