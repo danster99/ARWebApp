@@ -24,37 +24,37 @@ export async function getCategories(){
     {
       name: 'Mushroom & Truffle',
       id:'1',   
-      description: 'Paine brioche, maioneza cu trufe, carne de vita portie mare, branza americana cu trufe, ciuperci King Oyster, rucola. (Alergeni: gluten,oua,lapte,susan) 450g',
+      description: 'Paine brioche, maioneza cu trufe, carne de vita portie mare, branza americana cu trufe, ciuperci King Oyster, rucola. (Alergeni: gluten, oua, lapte, susan) 450g',
       price: '39.00 lei',
     },
     {
         name: 'VIVO Burger',
         id:'2',   
-        description: 'Paine brioche, ketchup, carne vita extra gramaj, bacon, parmezan, branza facuta in house, ulei de trufe, ceapa caramelizata, salata verde, rosii, castraveti murati. (Alergeni: gluten,oua,lapte,susan, mustar) 400gr',
+        description: 'Paine brioche, ketchup, carne vita extra gramaj, bacon, parmezan, branza facuta in house, ulei de trufe, ceapa caramelizata, salata verde, rosii, castraveti murati. (Alergeni: gluten oua, lapte, susan, mustar) 400gr',
         price: '36.00 lei',
     },
     {
         name: 'Italian Burger',
         id:'3',   
-        description: 'Paine brioche, ketchup, carne vita, mozzarella, rucola, pesto de rosii uscate. (Alergeni: gluten,oua,lapte,susan,peste) 350gr',
+        description: 'Paine brioche, ketchup, carne vita, mozzarella, rucola, pesto de rosii uscate. (Alergeni: gluten, oua, lapte, susan, peste) 350gr',
         price: '31.00 lei',
     },
     {
         name: 'Clasic Burger',
         id:'4',   
-        description: 'Paine brioche, ketchup, salata verde, carne, rosii, ceapa rosie, castraveti murati. (Alergeni: gluten,oua,lapte, susan) 300gr',
+        description: 'Paine brioche, ketchup, salata verde, carne, rosii, ceapa rosie, castraveti murati. (Alergeni: gluten, oua, lapte, susan) 300gr',
         price: '25.00 lei',
     },
     {
         name: 'Cheeseburger',
         id:'5',   
-        description: 'Paine brioche, ketchup, salata verde, carne, branza Gouda, rosii, ceapa rosie, castraveti murati. (Alergeni: gluten,oua,lapte,susan) 350gr',
+        description: 'Paine brioche, ketchup, salata verde, carne, branza Gouda, rosii, ceapa rosie, castraveti murati. (Alergeni: gluten, oua,  lapte,susan) 350gr',
         price: '28.00 lei',
     },
     {
         name: 'Double Cheeseburger',
         id:'6',   
-        description: 'Paine brioche, ketchup, 2xcarne vita, 2x branza, ceapa rosie, Castraveti murati. (Alergeni: gluten,oua,lapte,susan) 350gr',
+        description: 'Paine brioche, ketchup, 2xcarne vita, 2x branza, ceapa rosie, Castraveti murati. (Alergeni: gluten, oua, lapte, susan) 350gr',
         price: '33.00 lei',
     },
     {
@@ -66,13 +66,13 @@ export async function getCategories(){
     {
         name: 'Fried Chicken',
         id:'8',   
-        description: 'Paine brioche, salata coleslaw, crispy pui, branza Gouda , castraveti murati, sos aioli. (Alergeni: gluten,oua,lapte,susan,mustar) 350gr',
+        description: 'Paine brioche, salata coleslaw, crispy pui, branza Gouda , castraveti murati, sos aioli. (Alergeni: gluten, oua, lapte, susan,mustar) 350gr',
         price: '25.00 lei',
     },
     {
         name: 'Falafel Burger',
         id:'9',   
-        description: 'Paine brioche, ketchup, salata verde, falafel, rosii, ceapa rosie, Castraveti murati, sos tzatziki. (Alergeni: gluten,oua,lapte,susan) 300gr',
+        description: 'Paine brioche, ketchup, salata verde, falafel, rosii, ceapa rosie, Castraveti murati, sos tzatziki. (Alergeni: gluten, oua, lapte, susan) 300gr',
         price: '24.00 lei',
     },
     {
@@ -88,7 +88,7 @@ export async function getCategories(){
     {
       name: 'House Of Ribs',
       id:'11',   
-      description: 'Coaste de purcel, salata coleslaw, sos, castraveti murati, paine brioche. (Alergeni: gluten,oua,lapte,susan,mustar) 400gr',
+      description: 'Coaste de purcel, salata coleslaw, sos, castraveti murati, paine brioche. (Alergeni: gluten, oua, lapte, susan, mustar) 400gr',
       price: '54.00 lei',
     }
   ];
@@ -98,7 +98,7 @@ export async function getCategories(){
     {
       name: 'The Big Soup Theory',
       id:'12',   
-      description: 'Rosii, masline, parmezan, crutoane cu branza. (Alergeni: gluten,oua,lapte,susan,telina)',
+      description: 'Rosii, masline, parmezan, crutoane cu branza. (Alergeni: gluten, oua, lapte, susan, telina)',
       price: '15.00 lei',
     }
   ];
@@ -108,19 +108,19 @@ export async function getCategories(){
     {
       name: 'The Italian Salad',
       id: '13',
-      description: 'Salata verde, piept de pui, crutoanele casei sos ceaser (parmezan,ansoa). (Alergeni: gluten,oua,lapte,susan,mustar,peste)',
+      description: 'Salata verde, piept de pui, crutoanele casei sos ceaser (parmezan,ansoa). (Alergeni: gluten, oua, lapte, susan, mustar, peste)',
       price: '31.00 lei',
     },
     {
       name: 'The Fancy Salad',
       id: '14',
-      description: 'Baby spinach, crisp de prosciutto crudo, nuci caramelizate, gorgonzola, pere baby in compot, dressing de otet balsamic. (Alergeni: lapte,fructe cu coaja lemnoasa, mustra)',
+      description: 'Baby spinach, crisp de prosciutto crudo, nuci caramelizate, gorgonzola, pere baby in compot, dressing de otet balsamic. (Alergeni: lapte, fructe cu coaja lemnoasa, mustar)',
       price: '33.00 lei',
     },
     {
       name: 'The Geek Salad',
       id: '15',
-      description: 'Salata mixta, rosii, castraveti, ceapa rosie,tzatziki, telemea, dressing de lamaie. (Alergeni: lapte,mustar)',
+      description: 'Salata mixta, rosii, castraveti, ceapa rosie,tzatziki, telemea, dressing de lamaie. (Alergeni: lapte, mustar)',
       price: '28.00 lei',
     },
     {
@@ -145,13 +145,13 @@ export async function getCategories(){
     {
       name: 'Mama\'s Cake',
       id:'17',   
-      description: 'Cheesecake (Alergeni: gluten,oua,lapte)',
+      description: 'Cheesecake (Alergeni: gluten, oua, lapte)',
       price: '16.00 lei',
     },
     {
       name: 'Choklit',
       id:'18',   
-      description: 'Mousse de ciocolată, mousse de caramel, biscuite de cacao, sos de ciocolată belgiană, granita de castravete cu mentă şi gin londonez.',
+      description: 'Mousse de ciocolată, mousse de caramel, biscuite de cacao, sos de ciocolată belgiană, granita de castravete cu menta si gin londonez.',
       price: '16.00 lei',
     }
   ];
