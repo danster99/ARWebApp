@@ -29,6 +29,15 @@
   url("/src/fonts/Halvar/HalvarStnclMittel-LtMinG.ttf");
 }
 
+@font-face {
+  font-family: "Antonio";
+  src: local("Antonio"),
+  url("/src/fonts/Antonio/Antonio-Light.ttf");
+}
+
+.font-face-antonio{
+  font-family:"Antonio";
+}
 
 .font-face-halvar-regular{
   font-family:"HalvarStnclMittel-LtMinG";

@@ -64,7 +64,7 @@ const AccordionSummary = withStyles({
 const AccordionDetails = withStyles((theme) => ({
   root: {
     backgroundColor:'#f0ece4',
-    borderBottom:'2px solid rgba(0, 0, 0, 0.6)',
+    borderBottom:'2px solid rgba(0, 0, 0, 0.8)',
     marginBottom: '-3px',
     padding: theme.spacing(2),
     // paddingBottom: '0% !important',
@@ -115,8 +115,8 @@ export default function CustomizedAccordions() {
           {DataOverall.map((subclass, subIndex) => {
           return (
             <>
-              <h1 id={"item"+subIndex} className="font-face-halvar" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center', fontSize:'7vh'}}>{subclass.name}</h1>
-                <div className="food-category font-face-fbk">
+              <h1 id={"item"+subIndex} className="font-face-antonio" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center', fontSize:'7vh', fontWeight:'500'}}>{subclass.name}</h1>
+                <div className="food-category">
                   {subclass.variable.map((item, index) => {
                   index=subIndex*100+index;
                   return (
@@ -126,12 +126,12 @@ export default function CustomizedAccordions() {
                     <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header">
-                      <h2 className="font-face-halvar-regular">{item.name}</h2>
+                      <h2 className="font-face-halvar-regular" style={{fontWeight:'900'}}>{item.name}</h2>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography style={{width:'100%', alignItems:'center', fontFamily:"FuturaBook"}}>
-                        <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>{item.description}</p>
-                        <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>Pret: {item.price}</p>
+                        <p className="font-face-halvar-regular" style={{fontSize:'20px', fontWeight:'600'}}>{item.description}</p>
+                        <p className="font-face-halvar-regular" style={{fontSize:'20px', fontWeight:'600'}}>Pret: {item.price}</p>
                         <div style={{padding:'5% 30% 0% 30%', margin:'auto'}} >
                           <Button buttonStyle='btn--primary' className="font-face-halvar-ming" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
