@@ -132,7 +132,7 @@ export default function CustomizedAccordions() {
                       <Typography style={{width:'100%', alignItems:'center', fontFamily:"FuturaBook"}}>
                         <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>{item.description}</p>
                         <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>Pret: {item.price}</p>
-                        <div style={{padding:'0% 30%', margin:'auto'}} >
+                        <div style={{padding:'5% 30% 0% 30%', margin:'auto'}} >
                           <Button buttonStyle='btn--primary' className="font-face-halvar-ming" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
