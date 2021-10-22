@@ -84,8 +84,8 @@ body{
     border: none;
     background: black;
     color: #fff7e3;
-    width: 18vw;
-    height: 4.5vh;
+    width: 16vw;
+    height: 4.2vh;
 }
 
 .a-enter-vr-button{
@@ -105,7 +105,7 @@ h1 {
 
 .rotate {
   position: relative;
-  top: 27vh;
+  top: 20vh;
   animation: rotation 8s infinite linear;
   margin-left: auto;
   margin-right: auto;
@@ -126,7 +126,7 @@ h1 {
 .loading-text{
   position: relative;
   display: flex;
-  top: 26vh;
+  top: 20vh;
   justify-content: space-around;
   align-items: center;
   width: 90vw;
@@ -136,22 +136,22 @@ h1 {
 
 .gif{
   position: relative;
-  top: 27vh;
+  top: 23vh;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 17vh;
+  padding-top: 9vh;
   display: block;
   height: 10vh;
 }
 
 .gif-ios{
-  padding-top: 10vh !important; 
+  padding-top: 7vh !important; 
 }
 
 .gif-text{
   position: relative;
   display: flex;
-  margin-top: 25vh;
+  margin-top: 20vh;
   justify-content: space-around;
   align-items: center;
   width: 90vw;
@@ -176,7 +176,7 @@ h1 {
   background-color: #f04e23;
   color: black;
   cursor: pointer;
-  padding: 2.5vh;
+  padding: 2.7vh;
   width: 100%;
   border: none;
   text-align: left;
