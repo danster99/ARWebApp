@@ -46,8 +46,7 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    paddingBottom:'0px',
+    backgroundColor: 'rgba(255, 255, 255, 0.04)',
     minHeight: 56,
     '&$expanded': {
       minHeight: 56,
@@ -63,7 +62,7 @@ const AccordionSummary = withStyles({
 
 const AccordionDetails = withStyles((theme) => ({
   root: {
-    backgroundColor:'#f0ece4',
+    backgroundColor:'#fff7e3',
     borderBottom:'2px solid rgba(0, 0, 0, 0.8)',
     marginBottom: '-3px',
     padding: theme.spacing(2),
@@ -115,7 +114,7 @@ export default function CustomizedAccordions() {
           {DataOverall.map((subclass, subIndex) => {
           return (
             <>
-              <h1 id={"item"+subIndex} className="font-face-antonio" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center', fontSize:'7vh', fontWeight:'500'}}>{subclass.name}</h1>
+              <h1 id={"item"+subIndex} className="font-face-antonio" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center', fontSize:'8vh', fontWeight:'500'}}>{subclass.name}</h1>
                 <div className="food-category">
                   {subclass.variable.map((item, index) => {
                   index=subIndex*100+index;
@@ -133,7 +132,7 @@ export default function CustomizedAccordions() {
                         <p className="font-face-halvar-regular" style={{fontSize:'20px', fontWeight:'600'}}>{item.description}</p>
                         <p className="font-face-halvar-regular" style={{fontSize:'20px', fontWeight:'600'}}>Pret: {item.price}</p>
                         <div style={{padding:'5% 30% 0% 30%', margin:'auto'}} >
-                          <Button buttonStyle='btn--primary' className="font-face-halvar-ming" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
+                          <Button buttonStyle='btn--primary' className="font-face-halvar-regular" style={{fontWeight:'900 !important'}} buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
                     </AccordionDetails>
