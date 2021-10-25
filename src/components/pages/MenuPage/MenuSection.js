@@ -23,7 +23,7 @@ function redirect(item, model){
 
 const Accordion = withStyles({
   root: {
-    backgroundColor: '#f04e23',
+    backgroundColor: '#f56942',
     color:'#00000',
     boxShadow: 'none',
     '&:last-child':{
