@@ -1,3 +1,70 @@
+@media screen and (orientation: landscape) {
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    overflow-x: hidden;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    left: 0;
+  }
+
+  body{
+    align-content: center;
+    align-items: center;
+  }
+
+  .body{
+    visibility: hidden !important;
+    height: 0% !important;
+    width: 0% !important;
+  }
+
+  .landscape{
+    visibility: visible;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+  }
+
+  h1{
+      font-weight: 600;
+      font-size: 5vw !important;
+  }
+
+  video{
+    visibility: hidden;
+  }
+
+  .a-canvas{
+    visibility: hidden;
+  }
+
+  .header-content{
+    visibility: hidden;
+  }
+
+  a-scene{
+    visibility: hidden !important;
+    height: 0%;
+    width: 0%;
+  }
+
+  .header{
+    visibility: hidden !important;
+    height: 0%;
+    width: 0%;
+  }
+  
+}
+
+
 @font-face {
   font-family: "HalvarStnclMittel-BdMidG";
   src: local("HalvarStnclMittel-BdMidG"),
@@ -45,14 +112,26 @@
 }
 
 
+@media screen and (orientation: portrait) {
 
+  .landscape{
+    visibility: hidden;
+    margin: auto;
+    height: 0%;
+    width: 0%;
+  }
 
+  .a-enter-vr-button{
+    visibility: hidden;
+  }
+
+  
 video{  
     height: 90%  !important;
     top: 10% !important;
 }
 
-body{
+.body{
   height: 90vh !important;
   overflow: hidden !important;
 }
@@ -61,13 +140,14 @@ body{
     position: relative;
     bottom: 0;
     left: 0;
-    height: 12%;
+    height: 12vh;
     width: auto;
     display: flex;
     justify-content:space-around;
     align-items:center;
     background-color: #f56942;
     z-index: 1;
+    margin-top: -30px;
 }
 
 .header-content{
@@ -88,9 +168,7 @@ body{
     height: 4.2vh;
 }
 
-.a-enter-vr-button{
-    visibility: hidden;
-}
+
 
 a, a:hover, a:focus, a:active, a:visited {
   text-decoration: none;
@@ -204,7 +282,7 @@ h1 {
 }
 
 .collapsible-ios {
-  padding-bottom: 17vh;
+  padding-bottom: 18vh;
 }
 
 
@@ -222,4 +300,5 @@ h1 {
 
 .active:after {
   content: "\2212";
+}
 }

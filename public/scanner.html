@@ -11,22 +11,24 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-
+<div class="landscape">
+  <h1 class="back-button font-face-halvar-regular" style="color: white;">Feature available only in portrait mode!</h1>
+</div>
+<body>
   <div class="header">
-
     <div class="header-content">
       <!-- <img src="/images/logo-viar.jpg"/> -->
       <h1 class="font-face-halvar-regular" style="font-size: 5vh; font-weight: 700">VIVO Burgers</h1>
       <button class="back-button font-face-halvar-regular" style="font-size: 2.5vh !important; font-weight: 700;"><a href="/">BACK</a></button>
     </div>
   </div>
-  <body name="body" style="margin : auto; overflow: hidden; display: block;" id="slider">
+  <div name="body" class="body" style="margin : auto; overflow: hidden; display: block;" id="slider">
 
 
     <div id="preloader" style="height: 90vh; width: auto; background-color: #ffff; visibility: visible; top: 0vh; left: 0vw; ">
       <img src="/images/logo-portocaliu-full.png" class="rotate" width="100" height="100" loading="lazy" />
       <div class="loading-text">
-        <h2 style="display: block; color: black; font-size: 4.5vh;" class="font-face-halvar-regular">Loading your model...</h2>
+        <h2 style="display: block; color: black; font-size: 8vw;" class="font-face-halvar-regular">Loading your model...</h2>
       </div>
       <div id="swipeAnimation">
         <img src="/images/swipe-helper.gif" class="gif" id="gif"/>
@@ -42,7 +44,7 @@
           <a-entity
           id="model"
           position="0 0 0"
-          scale="20 20 20"
+          scale="2 2 2"
           material="shader: flat"
           animation="property: rotation; dur: 15000; to: 0 360 0; easing: linear; loop: true"></a-entity>
           <a-entity light="type: ambient; color: #FFF; intensity: 1"></a-entity>
@@ -55,10 +57,10 @@
     <div class="banner" id="banner">
       
       <div class="content" id="content">
-        <p style="font-size: 2.3vh !important; font-weight: 600; margin-bottom: 0vh;" class="font-face-halvar-regular" id="description"></p>
-        <p style="font-size: 2.6vh !important; font-weight: 600; margin-top: 0.4vh;" class="font-face-halvar-regular" id="price">price</p>
+        <p style="font-size: 4vw !important; font-weight: 600; margin-bottom: 0vh;" class="font-face-halvar-regular" id="description"></p>
+        <p style="font-size: 5vw !important; font-weight: 600; margin-top: 0.4vh;" class="font-face-halvar-regular" id="price">price</p>
       </div>
-      <button type="button" class="collapsible font-face-halvar-regular" id="collapsible" style="font-size: 30px !important; font-weight: 900;">Open Collapsible</button>
+      <button type="button" class="collapsible font-face-halvar-regular" id="collapsible" style="font-size: 7vw !important; font-weight: 900;">Open Collapsible</button>
     </div>
     <script>
       var coll = document.getElementsByClassName("collapsible");
@@ -218,5 +220,6 @@
     
     
     </script>
-  </body>
+  </div>
+</body>
 </html>
