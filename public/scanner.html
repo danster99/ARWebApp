@@ -199,7 +199,9 @@
       })
 
       function detectBrowser() { 
-        if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+        console.log(navigator.userAgent.toString());
+        if(window.opera || (navigator.userAgent.match("Opera") || navigator.userAgent.match('OPR')) != -1 ) {
+            alert("Best viewed on Google Chrome or Safari!");
             return 'Opera';
         } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
             return 'Chrome';
@@ -209,10 +211,13 @@
             document.getElementById("collapsible").classList.toggle("collapsible-ios");
             return 'Safari';
         } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+            alert("Best viewed on Google Chrome or Safari!");
             return 'Firefox';
         } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+            alert("Best viewed on Google Chrome or Safari!");
             return 'IE';//crap
         } else {
+            alert("Best viewed on Google Chrome or Safari!");
             return 'Unknown';
         }
       } 
