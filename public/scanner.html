@@ -200,10 +200,7 @@
 
       function detectBrowser() { 
         console.log(navigator.userAgent.toString());
-        if(window.opera || (navigator.userAgent.match("Opera") || navigator.userAgent.match('OPR')) != -1 ) {
-            alert("Best viewed on Google Chrome or Safari!");
-            return 'Opera';
-        } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+        if(navigator.userAgent.indexOf("Chrome") != -1 ) {
             return 'Chrome';
         } else if(navigator.userAgent.indexOf("Safari") != -1) {
             document.getElementById("gif").classList.toggle("gif-ios");
@@ -221,7 +218,7 @@
             return 'Unknown';
         }
       } 
-      console.log(detectBrowser());
+      // console.log(detectBrowser());
     
     
     </script>

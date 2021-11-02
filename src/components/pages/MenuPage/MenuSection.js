@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import is from 'is_js';
 import { DataOverall } from './Data';
 import { Button } from '../../Button';
 import '../../../App.css';
@@ -94,6 +95,10 @@ function getTotalNr(){
   return number;
 }
 
+function CheckBrowser(){
+  if(is.not.chrome() && is.not.safari() || navigator.userAgent.match("amsung") || navigator.userAgent.match("iaomi") || navigator.userAgent.match("uawei"))
+    alert("Best viewed on Chrome or Safari!");
+}
 
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
@@ -102,6 +107,7 @@ export default function CustomizedAccordions() {
     setExpanded(newExpanded ? panel : false);
   };
 
+  CheckBrowser();
   return (
     <div  className="background">
       <div className="background-fade">
