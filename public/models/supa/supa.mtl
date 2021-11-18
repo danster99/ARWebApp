@@ -1,34 +1,18 @@
-newmtl Piatra_Vulcanica
+newmtl 1
 Ka 1.000000 1.000000 1.000000
 Ks 0.000000 0.000000 0.000000
 d 1
 Ns 0.00000
 illum 1
-map_Kd piatra.jpg
+map_Kd supavu2_1.jpg
 
-newmtl painesupa
+newmtl supaok1
 Ka 1.000000 1.000000 1.000000
 Ks 0.000000 0.000000 0.000000
 d 1
 Ns 0.00000
 illum 1
-map_Kd paine.jpg
-
-newmtl supa
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-d 1
-Ns 0.00000
-illum 1
-map_Kd supa.jpg
-
-newmtl supa.001
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-d 1
-Ns 0.00000
-illum 1
-map_Kd bol.jpg
+map_Kd supavu2_supaok1.jpg
 
 newmtl NO_MATERIAL
 Ka 1.000000 0.000000 0.000000
