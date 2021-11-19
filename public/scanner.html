@@ -93,6 +93,7 @@
       var modelName;
       var modelDescription;
       var modelPrice;
+      var loaded = false;
 
       async function setParams(id, mdl, name, description, price)
       {
@@ -126,6 +127,7 @@
 
       function loadObj(objModel, description, price)
       {
+        loaded = false;
         var script = document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+objModel.toString()+"/"+objModel.toString()+".obj); mtl: url(/models/"+objModel.toString()+"/"+objModel.toString()+".mtl)");
         const loader = new THREE.OBJLoader();
         loader.load("/models/"+objModel.toString()+"/"+objModel.toString()+".obj", function()
@@ -135,6 +137,7 @@
           document.getElementById('price').innerHTML = "Pret: " + this.modelPrice;
           document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%;");
           document.getElementById("banner").setAttribute("style", "visibility: visible");
+          setTimeout(function(){ loaded = true; }, 1000);
         })
       }
 
@@ -147,7 +150,7 @@
 
 
       function handleGesture() {
-        if (touchendX - touchstartX < -70 && id+1<=totalNr){
+        if (touchendX - touchstartX < -70 && id+1<=totalNr && loaded){
           document.getElementById("banner").setAttribute("style", "visibility: hidden");
           console.log("swiped left");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh; background-color: rgba(255,255,255,0.5)");
@@ -167,7 +170,7 @@
             })
           })));
         }
-        if (touchendX - touchstartX > 70 && id-1>0){
+        if (touchendX - touchstartX > 70 && id-1>0 && loaded){
           document.getElementById("banner").setAttribute("style", "visibility: hidden");
           console.log("swiped right");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh; background-color: rgba(255,255,255,0.5)");
