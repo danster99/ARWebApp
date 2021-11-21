@@ -8,11 +8,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/home'>
-          <CustomizedAccordions/>
+        <Route exact path='/home' render={() => {window.location.href="/scanner.html"}}>        
         </Route>
-        <Route exact path='/' >
-          <CustomizedAccordions/>
+        <Route exact path='/' render={() => {window.location.href="/scanner.html"}}>
         </Route>
       </Switch>
     </Router>
