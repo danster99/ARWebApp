@@ -8,9 +8,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/home' render={() => {window.location.href="/scanner.html"}}>        
+        <Route exact path='/obj' render={() => {window.location.href="/scanner-obj.html"}}>        
         </Route>
-        <Route exact path='/' render={() => {window.location.href="/scanner.html"}}>
+        <Route exact path='/fbx' render={() => {window.location.href="/scanner-fbx.html"}}>        
+        </Route>
+        <Route exact path='/' render={() => {window.location.href="/scanner-obj.html"}}>
         </Route>
       </Switch>
     </Router>
