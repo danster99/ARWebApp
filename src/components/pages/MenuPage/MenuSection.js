@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import is from 'is_js';
 import { DataOverall } from './Data';
 import { Button } from '../../Button';
 import '../../../App.css';
@@ -23,12 +24,16 @@ function redirect(item, model){
 
 const Accordion = withStyles({
   root: {
-    // backgroundColor: '#fffff6',
-    backgroundColor: '#ff9466',
+    backgroundColor: '#f56942',
     color:'#00000',
     boxShadow: 'none',
+    '&:last-child':{
+      borderBottomLeftRadius: '20px',
+      borderBottomRightRadius: '20px',
+    },
     '&:not(:last-child)': {
-      borderBottom:'1px solid rgba(0, 0, 0, 0.5)',
+      borderBottom:'2px solid rgba(0, 0, 0, 0.3)',
+      paddingBottom:'2px'
     },
     '&:before': {
       display: 'none',
@@ -37,13 +42,12 @@ const Accordion = withStyles({
       margin: 'auto',
     },
   },
-  expanded: {},
+  expanded: {borderBottom: '1px solid rgba(0, 0, 0, 0) !important'},
 })(MuiAccordion);
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: 'rgba(0, 0, 0, 0)',
-    marginBottom: -1,
+    backgroundColor: 'rgba(255, 255, 255, 0.04)',
     minHeight: 56,
     '&$expanded': {
       minHeight: 56,
@@ -59,11 +63,17 @@ const AccordionSummary = withStyles({
 
 const AccordionDetails = withStyles((theme) => ({
   root: {
+    backgroundColor:'#fff7e3',
+    borderBottom:'2px solid rgba(0, 0, 0, 0.8)',
+    marginBottom: '-3px',
     padding: theme.spacing(2),
     // paddingBottom: '0% !important',
     alignItems:'center',
-    color:'#fff',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    '&:last-child':{
+      borderBottomLeftRadius: '20px',
+      borderBottomRightRadius: '20px',
+    }
   },
 }))(MuiAccordionDetails);
 
@@ -85,6 +95,10 @@ function getTotalNr(){
   return number;
 }
 
+function CheckBrowser(){
+  if(is.not.chrome() && is.not.safari() || navigator.userAgent.match("amsung") || navigator.userAgent.match("iaomi") || navigator.userAgent.match("uawei"))
+    alert("Best viewed on Chrome or Safari!");
+}
 
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
@@ -93,6 +107,7 @@ export default function CustomizedAccordions() {
     setExpanded(newExpanded ? panel : false);
   };
 
+  CheckBrowser();
   return (
     <div  className="background">
       <div className="background-fade">
@@ -105,24 +120,25 @@ export default function CustomizedAccordions() {
           {DataOverall.map((subclass, subIndex) => {
           return (
             <>
-              <h1 id={"item"+subIndex} className="font-face-halvar" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center'}}>{subclass.name}</h1>
-                <div className="food-category font-face-fbk">
+              <h1 id={"item"+subIndex} className="font-face-antonio" style={{color:'#000000', width:'100%', marginTop:'10%', textAlign:'center', fontSize:'8vh', fontWeight:'500'}}>{subclass.name}</h1>
+                <div className="food-category">
                   {subclass.variable.map((item, index) => {
                   index=subIndex*100+index;
                   return (
                     <>
-                  <Accordion square expanded={expanded === item.name} onChange={handleChange(item.name)}>
+                  <Accordion square id={index%100} expanded={expanded === item.name} onChange={handleChange(item.name)} style={{borderTopLeftRadius: index%100 == 0? '20px' : null,
+                                                                                                                                borderTopRightRadius: index%100 == 0? '20px' : null}}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon style={{color:'rgba(0, 0, 0, 0.8)'}} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header">
-                      <h2 className="font-face-halvar-regular">{item.name}</h2>
+                      <h2 className="font-face-halvar-regular" style={{fontWeight:'900'}}>{item.name}</h2>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography style={{width:'100%', alignItems:'center', fontFamily:"FuturaBook"}}>
-                        <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>{item.description}</p>
-                        <p className="font-face-halvar-regular" style={{fontSize:'20px'}}>Pret: {item.price}</p>
-                        <div style={{padding:'0% 30%', margin:'auto'}} >
-                          <Button buttonStyle='btn--primary' className="font-face-halvar-ming" buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
+                        <p className="font-face-halvar-regular" style={{fontSize:'20px', fontWeight:'600'}}>{item.description}</p>
+                        <p className="font-face-halvar-regular" style={{fontSize:'20px', fontWeight:'600'}}>Pret: {item.price}</p>
+                        <div style={{padding:'5% 30% 0% 30%', margin:'auto'}} >
+                          <Button buttonStyle='btn--primary' className="font-face-halvar-regular" style={{fontWeight:'900 !important'}} buttonSize='btn--mobile' onClick={() => {handleClick(item.name.toString(), item.id.toString())}}>View in 3D</Button>
                         </div> 
                       </Typography>
                     </AccordionDetails>

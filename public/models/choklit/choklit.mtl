@@ -1,11 +1,3 @@
-newmtl Mouse
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-d 1
-Ns 0.00000
-illum 1
-map_Kd choklit.jpg
-
 newmtl Piatra_Vulcanica
 Ka 1.000000 1.000000 1.000000
 Ks 0.000000 0.000000 0.000000
@@ -14,29 +6,13 @@ Ns 0.00000
 illum 1
 map_Kd piatra.jpg
 
-newmtl Sosiera
+newmtl mouse
 Ka 1.000000 1.000000 1.000000
 Ks 0.000000 0.000000 0.000000
 d 1
 Ns 0.00000
 illum 1
-map_Kd sosiera.jpg
-
-newmtl Sosiera.001
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-d 1
-Ns 0.00000
-illum 1
-map_Kd sosiera1.jpg
-
-newmtl cg
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-d 1
-Ns 0.00000
-illum 1
-map_Kd gheata.jpg
+map_Kd choklit.jpg
 
 newmtl NO_MATERIAL
 Ka 1.000000 0.000000 0.000000
