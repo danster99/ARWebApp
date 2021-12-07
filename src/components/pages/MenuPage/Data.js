@@ -102,7 +102,7 @@ export async function getCategories(){
       price: '15.00 lei',
     }
   ];
-
+ 
   export const Salads = [
   
     {
