@@ -134,10 +134,10 @@
         {
           document.getElementById('collapsible').innerHTML = this.modelName;
           document.getElementById('description').innerHTML = this.modelDescription;
+          setTimeout(function(){ loaded = true; }, 300);
           document.getElementById('price').innerHTML = "Pret: " + this.modelPrice;
           document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%;");
           document.getElementById("banner").setAttribute("style", "visibility: visible");
-          setTimeout(function(){ loaded = true; }, 1000);
         })
       }
 
