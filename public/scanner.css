@@ -133,6 +133,10 @@ video{
     top: 10% !important;
 }
 
+.a-canvas{
+  margin-top: -5vh !important;
+}
+
 .body{
   height: 90vh !important;
   overflow: hidden !important;
