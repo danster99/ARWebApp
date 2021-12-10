@@ -126,8 +126,8 @@ export async function getCategories(){
     {
       name: 'The Mix Salad',
       id: '16',
-      description: 'descriere lipsa',
-      price: '00.00 lei',
+      description: 'Mix de salata verde',
+      price: '20.00 lei',
     },
   ];
 
