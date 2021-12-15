@@ -159,6 +159,12 @@ export async function getCategories(){
       id:'20',   
       description: 'Mousse de ciocolată, mousse de caramel, biscuite de cacao, sos de ciocolată belgiană, granita de castravete cu menta si gin londonez.',
       price: '16.00 lei',
+    },
+    {
+      name: 'Choklit Sosiera Rotunda',
+      id:'21',   
+      description: 'Mousse de ciocolată, mousse de caramel, biscuite de cacao, sos de ciocolată belgiană, granita de castravete cu menta si gin londonez.',
+      price: '16.00 lei',
     }
   ];
   export const DataOverall =[
