@@ -134,8 +134,14 @@ export async function getCategories(){
   export const Sides = [
   
     {
-      name: 'Cheesy Potatoes',
+      name: 'Potatoes',
       id:'17',
+      description: 'Cartofi prajiti',
+      price: '10 lei',
+    },
+    {
+      name: 'Cheesy Potatoes',
+      id:'18',
       description: 'Cartofi prajiti, patrujel, usturoi, parmezan. (Alergeni: lapte)',
       price: '14 lei',
     }
@@ -144,13 +150,13 @@ export async function getCategories(){
   
     {
       name: 'Mama\'s Cake',
-      id:'18',   
+      id:'19',   
       description: 'Cheesecake (Alergeni: gluten, oua, lapte)',
       price: '16.00 lei',
     },
     {
       name: 'Choklit',
-      id:'19',   
+      id:'20',   
       description: 'Mousse de ciocolată, mousse de caramel, biscuite de cacao, sos de ciocolată belgiană, granita de castravete cu menta si gin londonez.',
       price: '16.00 lei',
     }
