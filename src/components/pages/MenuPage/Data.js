@@ -45,6 +45,13 @@ export const Deserts = [
     id:'6',
     description: 'Cheese cacke cu gem de capsuni si pudra de cacao.',
     price: '25 lei',
+  },
+  {
+    name: 'Clatite cu ciocolata si capsuni',
+    model:'pancakes', 
+    id:'7',
+    description: 'Clatite americane pufoase asortate cu ciocolata si capsuni.',
+    price: '31 lei',
   }
 ]
 
