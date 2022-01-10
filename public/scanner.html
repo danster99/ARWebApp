@@ -5,28 +5,33 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
   <script src="libs/inflate.min.js"></script>
+  <!-- import aframe and then ar.js with image tracking / location based features -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
 
-
+<div class="landscape">
+  <h1 class="back-button font-face-halvar-regular" style="color: white;">Feature available only in portrait mode!</h1>
+</div>
+<body>
   <div class="header">
-
     <div class="header-content">
       <!-- <img src="/images/logo-viar.jpg"/> -->
-      <h1 class="futura-bold">ViAR</h1>
-      <button class="back-button"><a href="/">BACK</a></button>
+      <h1 class="font-face-halvar-regular" style="font-size: 5vh; font-weight: 700">ViAR</h1>
+      <button class="back-button font-face-halvar-regular" style="font-size: 2.5vh !important; font-weight: 700;"><a href="/">BACK</a></button>
     </div>
   </div>
-  <body name="body" style="margin : auto; overflow: hidden; display: block;" id="slider">
+  <div name="body" class="body" style="margin : auto; overflow: hidden; display: block;" id="slider">
 
 
     <div id="preloader" style="height: 90vh; width: auto; background-color: #ffff; visibility: visible; top: 0vh; left: 0vw; ">
       <img src="/images/logo-viar.jpg" class="rotate" width="100" height="100" loading="lazy" />
       <div class="loading-text">
-        <h2 style="display: block; color: black; font-family:'PT Sans'; font-weight: normal;">Loading your model...</h2>
+        <h2 style="display: block; color: black; font-size: 8vw;" class="font-face-halvar-regular">Loading your model...</h2>
       </div>
       <div id="swipeAnimation">
         <img src="/images/swipe-helper.gif" class="gif" id="gif"/>
         <div class="gif-text">
-          <h3 style="display: block; color: black; font-family:'PT Sans'; font-weight: normal;">Swipe to navigate the menu.</h3>
+          <h3 style="display: block; color: black; font-size: 20px !important;" class="font-face-halvar-regular">Swipe to navigate the menu.</h3>
         </div>
       </div>
     </div>
@@ -36,11 +41,11 @@
       <a-marker preset='custom' type='pattern' url='pattern-pp.patt'>
           <a-entity
           id="model"
-          position="0 0 -0.5"
-          scale="20 20 20"
+          position="0 0 0"
+          scale="25 25 25"
           material="shader: flat"
           animation="property: rotation; dur: 15000; to: 0 360 0; easing: linear; loop: true"></a-entity>
-          <a-entity light="type: ambient; color: #FFF; intensity: 1.5"></a-entity>
+          <a-entity light="type: ambient; color: #FFF; intensity: 1"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
@@ -50,10 +55,10 @@
     <div class="banner" id="banner">
       
       <div class="content" id="content">
-        <p style="font-family: 'PT Sans', sans-serif" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p style="font-family: 'PT Sans', sans-serif" id="price">price</p>
+        <p style="font-size: 4vw !important; font-weight: 600; margin-bottom: 0vh;" class="font-face-halvar-regular" id="description"></p>
+        <p style="font-size: 5vw !important; font-weight: 600; margin-top: 0.4vh;" class="font-face-halvar-regular" id="price">price</p>
       </div>
-      <button type="button" class="collapsible" id="collapsible">Open Collapsible</button>
+      <button type="button" class="collapsible font-face-halvar-regular" id="collapsible" style="font-size: 7vw !important; font-weight: 900;">Open Collapsible</button>
     </div>
     <script>
       var coll = document.getElementsByClassName("collapsible");
@@ -86,6 +91,7 @@
       var modelName;
       var modelDescription;
       var modelPrice;
+      var loaded = false;
 
       async function setParams(id, mdl, name, description, price)
       {
@@ -101,17 +107,17 @@
       
       const params = new URLSearchParams(document.location.search);
       var id = parseInt(params.get("item"));
-      response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
+      response =  fetch('https://test.viar-eu.com/api/requests/model/get_model.php?ID='+id.toString())
       .then(response => response.json())
       .then(data => setParams(data.ID, data.model, data.name, data.description, data.price)
       .then(loadObj(this.model, this.modelDescription, this.modelPrice))
       .then(
-      fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
+      fetch('https://test.viar-eu.com/api/requests/request/new_request.php', {
         method: 'POST',
         mode: 'no-cors',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          client: 'TestSite',
+          client: 'TEST',
           item: this.modelName
         })
       })));
@@ -119,12 +125,14 @@
 
       function loadObj(objModel, description, price)
       {
+        loaded = false;
         var script = document.getElementById("model").setAttribute('obj-model',"obj: url(/models/"+objModel.toString()+"/"+objModel.toString()+".obj); mtl: url(/models/"+objModel.toString()+"/"+objModel.toString()+".mtl)");
         const loader = new THREE.OBJLoader();
         loader.load("/models/"+objModel.toString()+"/"+objModel.toString()+".obj", function()
         {
           document.getElementById('collapsible').innerHTML = this.modelName;
           document.getElementById('description').innerHTML = this.modelDescription;
+          setTimeout(function(){ loaded = true; }, 300);
           document.getElementById('price').innerHTML = "Pret: " + this.modelPrice;
           document.getElementById("preloader").setAttribute("style", "visibility: hidden; height: 0%;");
           document.getElementById("banner").setAttribute("style", "visibility: visible");
@@ -140,42 +148,42 @@
 
 
       function handleGesture() {
-        if (touchendX - touchstartX < -70 && id+1<=totalNr){
+        if (touchendX - touchstartX < -70 && id+1<=totalNr && loaded){
           document.getElementById("banner").setAttribute("style", "visibility: hidden");
           console.log("swiped left");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh; background-color: rgba(255,255,255,0.5)");
           id++;
-          response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
+          response =  fetch('https://test.viar-eu.com/api/requests/model/get_model.php?ID='+id.toString())
           .then(response => response.json())
           .then(data => setParams(data.ID, data.model, data.name, data.description, data.price)
           .then(loadObj(this.model, this.modelDescription, this.modelPrice))
           .then(
-          fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
+          fetch('https://test.viar-eu.com/api/requests/request/new_request.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              client: 'TestSite',
+              client: 'TEST',
               item: this.modelName
             })
           })));
         }
-        if (touchendX - touchstartX > 70 && id-1>0){
+        if (touchendX - touchstartX > 70 && id-1>0 && loaded){
           document.getElementById("banner").setAttribute("style", "visibility: hidden");
           console.log("swiped right");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh; background-color: rgba(255,255,255,0.5)");
           id--;
-          response =  fetch('https://test.viar-eu.com/api/api/model/get_model.php?ID='+id.toString())
+          response =  fetch('https://test.viar-eu.com/api/requests/model/get_model.php?ID='+id.toString())
           .then(response => response.json())
           .then(data => setParams(data.ID, data.model, data.name, data.description, data.price)
           .then(loadObj(this.model, this.modelDescription, this.modelPrice))
           .then(
-          fetch('https://test.viar-eu.com/api/api/request/new_request.php', {
+          fetch('https://test.viar-eu.com/api/requests/request/new_request.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              client: 'TestSite',
+              client: 'TEST',
               item: this.modelName
             })
           })));
@@ -192,9 +200,8 @@
       })
 
       function detectBrowser() { 
-        if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
-            return 'Opera';
-        } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+        console.log(navigator.userAgent.toString());
+        if(navigator.userAgent.indexOf("Chrome") != -1 ) {
             return 'Chrome';
         } else if(navigator.userAgent.indexOf("Safari") != -1) {
             document.getElementById("gif").classList.toggle("gif-ios");
@@ -202,16 +209,20 @@
             document.getElementById("collapsible").classList.toggle("collapsible-ios");
             return 'Safari';
         } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+            alert("Best viewed on Google Chrome or Safari!");
             return 'Firefox';
         } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+            alert("Best viewed on Google Chrome or Safari!");
             return 'IE';//crap
         } else {
+            alert("Best viewed on Google Chrome or Safari!");
             return 'Unknown';
         }
       } 
-      console.log(detectBrowser());
+      // console.log(detectBrowser());
     
     
     </script>
-  </body>
+  </div>
+</body>
 </html>

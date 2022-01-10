@@ -1,26 +1,4 @@
-export const client = "Demo";
-
-export async function getCategories(){
-    var categories = [];
-    var response = await fetch('https://test.viar-eu.com/api/api/category/get_all.php')
-      .then(response => response.json());
-    
-    //console.log(response.data);
-
-    response.data.forEach(function(element) {
-      let category ={
-        'name': element.categoryName,
-        'startID':element.startID,
-        'count': element.count
-      }
-      categories.push(category);
-    });
-    console.log(categories);
-    return categories;
-  }
-
-
-
+export const client = "TEST";
 
 export const EarlyFoods = [
   
