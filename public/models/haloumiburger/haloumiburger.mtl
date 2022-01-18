@@ -4,7 +4,7 @@ Ks 0.000000 0.000000 0.000000
 d 1
 Ns 0.00000
 illum 1
-map_Kd haloumiburger.jpg
+map_Kd haloumiburger_Burger_Nr.4.jpg
 
 newmtl Piatra_Vulcanica
 Ka 1.000000 1.000000 1.000000
@@ -12,7 +12,7 @@ Ks 0.000000 0.000000 0.000000
 d 1
 Ns 0.00000
 illum 1
-map_Kd piatra.jpg
+map_Kd haloumiburger_Piatra_Vulcanica.jpg
 
 newmtl NO_MATERIAL
 Ka 1.000000 0.000000 0.000000

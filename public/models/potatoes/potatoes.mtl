@@ -1,0 +1,22 @@
+newmtl cartofisimpli1
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+d 1
+Ns 0.00000
+illum 1
+map_Kd csimpi2_cartofisimpli1.jpg
+
+newmtl default
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+d 1
+Ns 0.00000
+illum 1
+map_Kd metal.jpg
+
+newmtl NO_MATERIAL
+Ka 1.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+d 1
+Ns 0.00000
+illum 1
