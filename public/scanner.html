@@ -128,17 +128,17 @@
       
       const params = new URLSearchParams(document.location.search);
       var id = parseInt(params.get("item"));
-      response =  fetch('http://localhost/testapi/requests/model/get_model.php?ID='+id.toString())
+      response =  fetch('https://test.viar-eu.com/api/requests/model/get_model.php?ID='+id.toString())
       .then(response => response.json())
       .then(data => setParams(data.ID, data.model, data.name, data.description, data.price)
       .then(loadObj(this.model, this.modelDescription, this.modelPrice))
       .then(
-      fetch('http://localhost/testapi/requests/request/new_request.php', {
+      fetch('https://test.viar-eu.com/api/requests/request/new_request.php', {
         method: 'POST',
         mode: 'no-cors',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          client: 'VIVO',
+          client: 'demoFeature',
           item: this.modelName
         })
       })));
@@ -174,17 +174,17 @@
           console.log("swiped left");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh; background-color: rgba(255,255,255,0.5)");
           id++;
-          response =  fetch('http://localhost/testapi/requests/model/get_model.php?ID='+id.toString())
+          response =  fetch('https://test.viar-eu.com/api/requests/model/get_model.php?ID='+id.toString())
           .then(response => response.json())
           .then(data => setParams(data.ID, data.model, data.name, data.description, data.price)
           .then(loadObj(this.model, this.modelDescription, this.modelPrice))
           .then(
-          fetch('http://localhost/testapi/requests/request/new_request.php', {
+          fetch('https://test.viar-eu.com/api/requests/request/new_request.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              client: 'VIVO',
+              client: 'demoFeature',
               item: this.modelName
             })
           })));
@@ -194,17 +194,17 @@
           console.log("swiped right");
           document.getElementById("preloader").setAttribute("style", "visibility: visible; height: 90vh; background-color: rgba(255,255,255,0.5)");
           id--;
-          response =  fetch('http://localhost/testapi/requests/model/get_model.php?ID='+id.toString())
+          response =  fetch('https://test.viar-eu.com/api/requests/model/get_model.php?ID='+id.toString())
           .then(response => response.json())
           .then(data => setParams(data.ID, data.model, data.name, data.description, data.price)
           .then(loadObj(this.model, this.modelDescription, this.modelPrice))
           .then(
-          fetch('http://localhost/testapi/requests/request/new_request.php', {
+          fetch('https://test.viar-eu.com/api/requests/request/new_request.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              client: 'VIVO',
+              client: 'demoFeature',
               item: this.modelName
             })
           })));
